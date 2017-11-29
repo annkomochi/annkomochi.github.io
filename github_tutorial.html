@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>githubコマンド集</title>
+  <style>
+ body {
+  width: 60%;
+  margin: auto;
+ }
+
+  table th {
+    background-color: gainsboro;
+    padding: 20px;
+  }
+  table td {
+    background-color: ghostwhite;
+    padding: 20px;
+  }
+
+  article {
+    text-align: justify;
+    background-color:  gainsboro;
+    padding: 20px;
+  }
+
+h1 {
+  border-bottom: 2px solid black;
+}
+  </style>
+</head>
+<body>
+<div class="about">
+    <h1>Git とは</h1>
+    <article>
+    <p>プログラムのソースコードなどの変更履歴を記録追跡するための分散型バージョン管理システムである。<br>
+    gitでは、各ユーザのワーキングディレクトリに、全履歴を含んだリポジトリの完全な複製が作られる。したがって、ネットワークにアクセスできないなどの理由で中心リポジトリにアクセスできない環境でも履歴の踏査や変更の記録といったほとんどの作業を行うことができる。これが「分散型」と呼ばれる理由である。</p>
+  </article>
+  </div>
+  <h1>github コマンド集</h1>
+  <table border="3" rules="all">
+    <tr>
+      <th>コマンド</th>
+      <th>説明</th>
+    </tr>
+    <tr>
+      <td>git add ファイル名</td>
+      <td>インデックス領域にあげる</td>
+    </tr>
+    <tr>
+      <td>git add .</td>
+      <td>インデックス領域に変更ファイルを全てあげる</td>
+    </tr>
+    <tr>
+      <td>git commit</td>
+      <td>インデックス領域にあるファイルをコミット</td>
+    </tr>
+    <tr>
+      <td>git commit -m "コメント"</td>
+      <td>commitのコメント簡易版</td>
+    </tr>
+    <tr>
+      <td>git push</td>
+      <td>Git hub へあげる</td>
+    </tr>
+    <tr>
+      <td>git log</td>
+      <td>gitのlogを見る</td>
+    </tr>
+    <tr>
+      <td>git branch</td>
+      <td>ブランチを見る</td>
+    </tr>
+    <tr>
+      <td>git branch ブランチ名</td>
+      <td>ブランチの作成</td>
+    </tr>
+    <tr>
+      <td>git checkout ブランチ名</td>
+      <td>ブランチを移動する</td>
+    </tr>
+    <td>git push origin ブランチ名</td>
+    <td>ブランチをgithubに送る</td>
+  </table>
+</body>
+</html>
