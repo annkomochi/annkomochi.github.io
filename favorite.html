@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>寿司ネタ</title>
+  <style>
+    body {
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+    <label for="fish">移動:</label>
+  <select name="fish" id="fish">
+      <option value="">--選択してください--</option>
+    <option value="maguro.html">マグロ</option>
+    <option value="sarmon.html">サーモン</option>
+    <option value="egg.html">たまご</option>
+    <option value="git.html">gitの使い方とgithub-pagesの作り方</option>
+    <option value="favorite.html">お気に入りの画像集へ</option>
+  </select><br>
+  <h1>紅葉🍂</h1>
+  <button>画像を変更</button>
+  <p><img id="image" src="./images/144357838170725919177_150928_107kuri.JPG" width="500px"></p>
+  <script>
+    document.addEventListener('DOMContentLoaded' , function(){
+      document.getElementById('fish').addEventListener('change',function(){
+        location.href = this.value;
+      },false)
+    },false);
+  </script>
+  <script>
+    window.addEventListener("load", function(){ //ロードしたとき
+ 
+    // 画像インデックス
+    var imageIndex = 0;
+ 
+    // リスナー登録
+    //getElementsByTagName タグを上から配列で管理
+    document.getElementsByTagName("button")[0].addEventListener("click", function(){  //buttonがclixkされた時
+        // 画像イメージをインクリメント
+        if (imageIndex < 3) {
+            imageIndex++;
+        } else {
+            imageIndex = 0;
+        }
+        // 画像srcを変更
+        switch(imageIndex) {
+          case 0:
+                imageSrc = "./images/144357838170725919177_150928_107kuri.JPG";
+                break;
+            case 1:
+                imageSrc = "./images/f642c5f2074eeb675af4aee79513acd0.jpg";
+                break;
+            case 2:
+                imageSrc = "./images/geinbikeikoyo1.jpg";
+                break;
+        }
+        document.getElementById("image").src = imageSrc;
+ 
+    }, false);
+});
+  </script>
+</body>
+</html>
