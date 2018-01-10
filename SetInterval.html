@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "ja">
+  <head>
+    <meta charset = "utf-8">
+    <title>JavaScriptの練習</title>
+  </head>
+  <body>
+    <input type="text" id="timer">
+    <button>開始</button>
+    <p id="timeoutput"></p>
+      <script>
+        window.addEventListener("load",function(){
+          document.getElementsByTagName('button')[0].addEventListener("click",timerset,false);
+          
+        })
+        var timerset = function(){
+          var time =parseInt (document.getElementById('timer').value);
+          document.getElementById('timeoutput').textContent = time--;
+          id()
+        }
+
+
+        //  var count = 0;
+          var countup = function(){
+            document.getElementById('timeoutput').textContent = time--;
+          }
+          var id = setInterval(function(){
+            countup();
+            if(time < 1){　
+              clearInterval(id);　//idをclearIntervalで指定している
+            }}, 1000);
+        </script>
+     
+    </script>
+  </body>
+</html>

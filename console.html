@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    width: 70%;
+    margin: auto;
+  }
+  .title {
+    font-size: 20px;
+    background-color: grey;
+    color: white;
+  }
+</style>
+<body>
+    <label for="fish">移動:</label>
+    <select name="fish" id="fish">
+        <option value="">--選択してください--</option>
+      <option value="maguro.html">マグロ</option>
+      <option value="sarmon.html">サーモン</option>
+      <option value="egg.html">たまご</option>
+      <option value="git.html">gitの使い方とgithub-pagesの作り方</option>
+      <option value="favorite.html">お気に入りの画像集へ</option>
+      <option value="brouser.html">ブラウザの確認</option>
+      <option value="window.html">windowオブジェクト</option>
+      <option value="console.html">consoleオブジェクト</option>
+    </select><br>
+    <h1>consoleオブジェクトの使い方について</h1>
+
+    <h2>javascriptにおけるコンソールとは</h2>
+    <p>ブラウザの開発者ツールの機能の一つであるコンソールの事を指します。</p>
+    <p>開発者ツールは大体のブラウザでF12で開くことができます。</p>
+    <p>コンソールの主な利用目的として、</p>
+    <ul>
+    <li>プログラムの状態を確認するためのログの出力</li>
+    <li>プログラムで発生したエラーの表示</li>
+    <li>テスト目的の単純なプログラムの実行</li>
+  </ul>
+    <p>と言うのが挙げられます。</p>
+    <p>javascriptではエラーなどが起こった場合、画面上でエラーが確認できるわけではなく、ブラウザの開発者ツールの中のコンソールにエラーメッセージが表示されます。</p>
+    <p>これだけでjavascript開発におけるコンソールの重要性が分かっていただけると思います。</p>
+    <p>WEB開発には欠かせないもので使いこなすことでより良いWEB開発を行うことができるでしょう</p>
+    
+    <h2>consoleオブジェクトとは</h2>
+    <p>そしてconsoleを操るために使われるのがconsoleオブジェクトです。</p>
+    <p>ブラウザで使用できる開発ツールのコンソールへアクセスする機能です。</p>
+    <p>基本的には、デバックや動作確認をするために使用されます。</p>
+    <p>今回は実用性のありそうな関数をいくつか紹介します。</p>
+    
+    <p class="title">コンソールにテキストを出力する</p>
+    <p>ソースコード</p>
+    <pre class="prettyprint">
+//一般的なログ情報を表示
+console.log('text1');
+//メッセージタイプのログ情報を表示
+console.info('text2');
+//警告メッセージを表示
+console.warn('text3');
+//エラーメッセージを表示
+console.error('text4');
+    </pre>
+    <p>実行例</p>
+    <img src="キャプチャ.PNG">
+    <p>説明</p>
+    <p>console.logを使うことでログ情報を表示することができます。</p>
+    <p>info,warn,errorなどを使うことによって色分けなどがされ見やすくなります。</p>
+
+    <p class="title">タイマー</p>
+    <p>ソースコード</p>
+    <pre class="prettyprint">
+//タイマースタート
+console.time('timer');
+//ここに測定したい処理を入力してください
+window.alert();
+//タイマーストップ
+console.timeEnd('timer');
+</pre>
+    <p>実行例</p>
+<img src="キャプチャ2.PNG">
+<p>説明</p>
+    <p>コンソールにテキストを表示する以外のconsoleオブジェクトもあります。</p>
+    <p>これはタイマーです。javascriptの処理時間を計測します。</p>
+    <p>console.timeでタイマースタートし、console.timeEndでストップします。その間の処理にかかった時間を測定します。</p>
+    <p>()の中はラベルを設定します。</p>
+    <p>今回サンプルのプログラムではアラートダイアログを閉じるまでの時間が表示されています。</p>
+    <p>自分の作ったプログラムがどのくらいの処理時間なのか知ることができて勉強になりそうですね。</p>
+    <p class="title">カウント</p>
+    <p>ソースコード</p>
+    <pre class="prettyprint">
+for(i = 0; i <3; i++){
+console.count('label');
+}
+    </pre>
+    <p>実行例</p>
+    <img src="キャプチャ3.PNG">
+    <p>説明</p>
+    <p>count()を呼び出した回数を数えます。</p>
+    <p>該当する箇所が何回呼び出されたかを確認できます。</p>
+    <p>これも実用性がありそうです。</p>
+
+    <h2>まとめ</h2>
+    <p>今回consoleオブジェクトについて調べてみて、consoleオブジェクトがWEB開発するうえで実用的な関数が沢山あることを知りました。</p>
+    <script>
+        document.addEventListener('DOMContentLoaded' , function(){
+          document.getElementById('fish').addEventListener('change',function(){
+            location.href = this.value;
+          },false)
+        },false);
+        </script>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+</body>
+</html>
