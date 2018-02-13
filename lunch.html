@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form action="lunch.html" name="lunchmenu">
+    <p>ご注文はなんでしょう♪</p>
+  <label><input type="radio" name="menu" value="蒙古ラーメン">蒙古ラーメン</label>
+  <label><input type="radio" name="menu" value="一楽ラーメン">一楽ラーメン</label>
+<label><input type="radio" name="menu" value="節骨ラーメン">節骨ラーメン</label>
+  <p>オプションはいかがですか♪</p>
+  <label><input type="radio" name="option" value="大盛">大盛</label>
+  <label><input type="radio" name="option" value="半チャーハン">半チャーハン</label>
+  <label><input type="radio" name="option" value="餃子">餃子</label>
+  <label><input type="radio" name="option" value="なし">なし</label>
+<br><input type="button" value="注文する" id="button1">
+</form>
+</body>
+<script>
+
+document.getElementById('button1').addEventListener('click',function(){
+  //メニューを記録する
+  for(i=0; i < lunchmenu.menu.length; i++){
+    if(lunchmenu.menu[i].checked == true){
+      var setmenu = lunchmenu.menu[i].value;
+      document.cookie = "SETMENU="+ setmenu;"max-age=180;path=/";
+      break;
+    }
+  }
+
+  //optionを記録する。
+  for(j=0; j< lunchmenu.option.length;j++){
+    if(lunchmenu.menu[i].checked == true){
+      var setoption = lunchmenu.option[i].value;
+      break;
+    }
+  }
+})
+</script>
+</html>
