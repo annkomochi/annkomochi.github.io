@@ -13,20 +13,25 @@
   <label><input type="radio" name="menu" value="一楽ラーメン">一楽ラーメン</label>
 <label><input type="radio" name="menu" value="節骨ラーメン">節骨ラーメン</label>
   <p>オプションはいかがですか♪</p>
-  <label><input type="radio" name="option" value="大盛">大盛</label>
-  <label><input type="radio" name="option" value="半チャーハン">半チャーハン</label>
-  <label><input type="radio" name="option" value="餃子">餃子</label>
-  <label><input type="radio" name="option" value="なし">なし</label>
+  <label><input type="radio" name="option" value="の大盛">大盛</label>
+  <label><input type="radio" name="option" value="と半チャーハン">半チャーハン</label>
+  <label><input type="radio" name="option" value="と餃子">餃子</label>
+  <label><input type="radio" name="option" value="オプションはなし">なし</label>
 <br><input type="button" value="注文する" id="button1">
 </form>
 </body>
 <script>
 
 document.getElementById('button1').addEventListener('click',function(){
+  var setoption;
+  var setmenu;
+  if(document.cookie == ture){
+    alert('書き込みがあります。')
+  } else {
   //メニューを記録する
   for(i=0; i < lunchmenu.menu.length; i++){
     if(lunchmenu.menu[i].checked == true){
-      var setmenu = lunchmenu.menu[i].value;
+      setmenu = lunchmenu.menu[i].value;
       document.cookie = "SETMENU="+ setmenu;"max-age=180;path=/";
       break;
     }
@@ -35,9 +40,13 @@ document.getElementById('button1').addEventListener('click',function(){
   //optionを記録する。
   for(j=0; j< lunchmenu.option.length;j++){
     if(lunchmenu.menu[i].checked == true){
-      var setoption = lunchmenu.option[i].value;
+      setoption = lunchmenu.option[i].value;
+      document.cookie = "SETMENU="+ setoption;"max-age=180;path=/";
       break;
     }
+  }
+
+  alert('お客様は注文済みです。\n'+setmenu+setoption+'です。\nしばらくお待ちください。' )
   }
 })
 </script>
