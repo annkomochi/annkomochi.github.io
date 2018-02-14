@@ -34,6 +34,7 @@ document.getElementById('button1').addEventListener('click',function(){
     // length
   for(i=0; i < lunchmenu.menu.length; i++){
     if(lunchmenu.menu[i].checked == true){
+      setTimeout(timealert, 120000);
       setmenu = lunchmenu.menu[i].value;
       document.cookie = "SETMENU="+ setmenu;"max-age=180;path=/";
       if(lunchmenu.big.checked == true){
@@ -61,5 +62,9 @@ document.getElementById('button1').addEventListener('click',function(){
   }
 }
 })
+
+var timealert = function(){
+  alert('ヘイお待ち!');
+}
 </script>
 </html>
