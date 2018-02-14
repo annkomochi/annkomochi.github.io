@@ -36,7 +36,7 @@ document.getElementById('button1').addEventListener('click',function(){
     if(lunchmenu.menu[i].checked == true){
       setTimeout(timealert, 120000);
       setmenu = lunchmenu.menu[i].value;
-      document.cookie = "SETMENU="+ setmenu+"max-age=180;path=/";
+      document.cookie = "SETMENU="+ setmenu+";max-age=180;path=/";
       if(lunchmenu.big.checked == true){
         setmenu = setmenu + '大盛';
         document.cookie = "SETBIG = 大盛;max-age=180;path=/";
