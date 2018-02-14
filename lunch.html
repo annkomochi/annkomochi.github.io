@@ -38,21 +38,21 @@ document.getElementById('button1').addEventListener('click',function(){
       document.cookie = "SETMENU="+ setmenu;"max-age=180;path=/";
       if(lunchmenu.big.checked == true){
         setmenu = setmenu + '大盛';
-        document.cookie = "SETOPTION ="+ '大盛,';"max-age=180;path=/";
+        document.cookie = 'SETBIG = 大盛,';"max-age=180;path=/";
       }
       if(lunchmenu.beef.checked == true){
         setmenu = setmenu + 'とチャーシュー飯';
-        document.cookie = "SETOPTION ="+ 'チャーシュー飯,';"max-age=180;path=/";
+        document.cookie = "SETBEEF = チャーシュー飯";"max-age=180;path=/";
       }
 
       if(lunchmenu.rice.checked == true){
         setmenu = setmenu + 'と半チャーハン';
-        document.cookie = "SETOPTION ="+ '半チャーハン,';"max-age=180;path=/";
+        document.cookie = "SETRICE = 半チャーハン;"max-age=180;path=/";
       }
 
       if(lunchmenu.gyoza.checked == true){
         setmenu = setmenu + 'と餃子'
-        document.cookie =  "SETOPTION ="+ '餃子,';"max-age=180;path=/";
+        document.cookie =  "SETGYOZA = 餃子";"max-age=180;path=/";
       }
 
       alert('お客様は注文済みです。\n' + setmenu + 'です。\n' + 'しばらくお待ちください.')
