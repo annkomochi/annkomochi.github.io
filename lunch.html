@@ -39,9 +39,6 @@ document.getElementById('button1').addEventListener('click',function(){
     }
 }
   //optionを記録する。
-      if(lunchmenu.menu[i].checked == true){
-         setoption = lunchmenu.option[i].value;
-
         if(lunchmenu.big.checked == true){
          setoption = setoption + '大盛';
          setoption2 = setoption2 + '大盛';
@@ -60,7 +57,7 @@ document.getElementById('button1').addEventListener('click',function(){
         }
         document.cookie = "SETOPTION="+ setmenu;"max-age=180;path=/"
 }
-  alert('お客様は注文済みです。\n'+setoption+'です。\nしばらくお待ちください。' );
+  alert('お客様は注文済みです。\n'+ setmenu +'と'+setoption+'です。\nしばらくお待ちください。' );
 })
 </script>
 
