@@ -13,10 +13,11 @@
   <label><input type="radio" name="menu" value="一楽ラーメン">一楽ラーメン</label>
 <label><input type="radio" name="menu" value="節骨ラーメン">節骨ラーメン</label>
   <p>オプションはいかがですか♪</p>
-  <label><input type="radio" name="option" value="の大盛">大盛</label>
-  <label><input type="radio" name="option" value="と半チャーハン">半チャーハン</label>
-  <label><input type="radio" name="option" value="と餃子">餃子</label>
-  <label><input type="radio" name="option" value="オプションはなし">なし</label>
+  <label><input type="checkbox" name="big" >大盛<br></label>
+  <label><input type="checkbox" name="beef">チャーシュー飯<br></label>
+  <label><input type="checkbox" name="rice" >半チャーハン<br></label>
+  <label><input type="checkbox" name="gyoza" >餃子<br></label>
+
 <br><input type="button" value="注文する" id="button1">
 </form>
 </body>
@@ -25,6 +26,7 @@
 document.getElementById('button1').addEventListener('click',function(){
   var setoption;
   var setmenu;
+  var setoption2;
   if(document.cookie.length > 0){
     alert('お客様は注文済みです。')
   } else {
@@ -35,19 +37,51 @@ document.getElementById('button1').addEventListener('click',function(){
       document.cookie = "SETMENU="+ setmenu;"max-age=180;path=/";
       break;
     }
-  }
-
+}
   //optionを記録する。
-  for(j=0; j< lunchmenu.option.length;j++){
-    if(lunchmenu.menu[i].checked == true){
-      setoption = lunchmenu.option[i].value;
-      document.cookie = "SETOPTION="+ setoption;"max-age=180;path=/";
-      break;
+      if(lunchmenu.menu[i].checked == true){
+         setoption = lunchmenu.option[i].value;
+
+        if(lunchmenu.big.checked == true){
+         setoption = setoption + '大盛';
+         setoption2 = setoption2 + '大盛';
+        }
+        if(lunchmenu.beef.checked == true){
+          setoption = setoption + 'と\nチャーシュー飯'
+          setoption2 = setoption2 + 'チャーシュー飯';
+        }
+        if(lunchmenu.rice.checked == true){
+         setoption = setoption +'と\n半チャーハン';
+         setoption2 = setoption2 + '半チャーハン';
+        }
+        if(lunchmenu.gyoza.checked == true){
+         setoption = setoption +'と\n餃子';
+         setoption2 = setoption2 +'餃子';
+        }
+        document.cookie = "SETOPTION="+ setmenu;"max-age=180;path=/"
+}
+  alert('お客様は注文済みです。\n'+setoption+'です。\nしばらくお待ちください。' );
+})
+</script>
+
+<script>
+  function menu1() {
+    for(var i =0; i < lunchmenu.menu.length; i++){
+      if(lunchmenu.menu[i].checked == true){
+        var setmenu = lunchmenu.menu[i].value;
+
+        if(lunchmenu.big.checked == true){
+          var setmenu = setmenu + '大盛';
+        }
+        if(lunchmenu.rice.checked == true){
+          var setmenu = setmenu +'と\n半チャーハン';
+        }
+        if(lunchmenu.gyoza.checked == true){
+          var setmenu = setmenu +'と\n餃子';
+        }
+        alert('ご注文は\n' + setmenu +'\nですね♪');
+      }
     }
   }
-
-  alert('お客様は注文済みです。\n'+setmenu+setoption+'です。\nしばらくお待ちください。' )
-  }
-})
 </script>
 </html>
