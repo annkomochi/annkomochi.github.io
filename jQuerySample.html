@@ -70,6 +70,14 @@
     #content {
       height: 300px;
     }
+
+    #fly {
+      margin: 20px;
+    }
+
+    .line {
+      font-weight: bold;
+    }
   </style>
 </head>
 
@@ -86,34 +94,35 @@
       <section id="slideshow">
         <h2>自動でスクロールするjQuery</h2>
         <a href="scroll.html">→DEMO</a>
-        <p>HTML</p>
+        <p  class="line">HTML</p>
         <pre><code class="prettyprint">
             &lt;div id="one"&gt;
             &lt;p id="scroll"&gt;ここをクリック&lt;/p&gt;
             &lt;/div>
             &lt;div id="two"&gt;&lt;/div&gt;
             </code></pre>
-        <p>jQuery</p>
+        <p  class="line">jQuery</p>
         <pre><code class="prettyprint">
             $('#scroll').click(function(){
               $("html,body").animate({scrollTop:$('#two').offset().top});
             })
             </code></pre>
         <p>サイトのトップページでよく見かけるスクロールを促すボタンをクリックすると自動でスクロールするあいつです。jQuryを使うとこんなにも簡単に出来る事に驚きました。</p>
+        <p  class="line">解説</p>
         <pre><code class="prettyprint">
-                  $("html,body").animate({scrollTop:$('#two').offset().top});
+                  $("html,body").animate({scrollTop:$('#two').offset().top},1000);
                 </code></pre>
-
+                <p>scrolletop:のあとに移動したい場所のスクロール数をいれます。<br>1000ミリ秒（1秒）で移動します。<br></p>
       </section>
       <section>
         <h2>スクロールするとトップへ戻るが現れるjQuery</h2>
         <a href="back.html">→DEMO</a>
-        <p>HTML</p>
+        <p  class="line">HTML</p>
         <pre><code class="prettyprint">
             &lt;p id="pagetop"&gt;&lt;a href="#one"&gt;PAGE TOP&lt;/a&gt;&lt;/p&gt;
             </code></pre>
         <p>これを実装したいページのコードの下の方に張り付けます。</p>
-        <p>jQuery</p>
+        <p  class="line">jQuery</p>
         <pre><code class="prettyprint">
             $(function() {
               var topBtn = $('#pagetop');    
@@ -129,41 +138,94 @@
           
           });
             </code></pre>
+            <p  class="line">解説</p>
+            <pre><code class="prettyprint">
+                topBtn.fadeIn();
+              </code></pre>
+              <p>フェードイン</p>
+              <pre><code class="prettyprint">
+                  topBtn.fadeOut();
+                </code></pre>
+                <p>フェードアウト、簡単ですね</p>
       </section>
       <section>
         <h2>画像をふわふわさせるjQuery</h2>
         <div id="content">
           <img id="fly" src="images\bird_tonbi.png" alt="とんび" width="200px">
         </div>
-        <p>HTML</p>
+        <p  class="line">HTML</p>
         <pre><code class="prettyprint">
               &lt;div id="content"&gt;
               &lt;img  id="fly" src="" alt="" &gt;
               &lt;/div&gt;
               </code></pre>
         <p>今回は画像でしたが文字とかでも大丈夫です。</p>
-        <p>css</p>
+        <p  class="line">css</p>
         <pre><code class="prettyprint">
             #content {
               height: 300px;
             }
       </code></pre>
       <p>親要素に高さを指定しないと下の要素に影響するので注意</p>
-        <p>jQuery</p>
+        <p  class="line">jQuery</p>
         <pre><code class="prettyprint">
-              $(function () {
-                setTimeout('rect()'); //アニメーションを実行
+            $(function () {
+              setTimeout('fly()');
             });
-             
-            function rect() {
-                $('#fly').animate({
-                    marginTop: '-=10px'
-                }, 800).animate({
-                    marginTop: '+=10px'
-                }, 800);
-                setTimeout('rect()', 1600); //アニメーションを繰り返す間隔
+          
+            function fly() {
+              $('#fly').animate({
+                marginTop: '-=10px'
+              }, 800).animate({
+                marginTop: '+=10px'
+              }, 800);
+              setTimeout('fly()', 1600); //アニメーションを繰り返す間隔
             }
               </code></pre>
+              <p class="line">解説</p>
+              <pre><code class="prettyprint">
+                  marginTop: '-=10px'
+                </code></pre>
+                <p>ここでマージンを削って浮いたようにします。</p>
+                <pre><code class="prettyprint">
+                    marginTop: '+=10px'
+                  </code></pre>
+                  <p>こんどはマージン増やして沈んだようにします。</p>
+      </section>
+      <section>
+          <h2>おまけ</h2>
+          <a href="animationpagetop.html">→DEMO</a>
+          <p  class="line">jQuery</p>
+          <pre><code class="prettyprint">
+              $(function() {
+                var topBtn = $('#pagetop');    
+                topBtn.hide();
+                //スクロールが100に達したらボタン表示
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 100) {
+                        topBtn.fadeIn();
+                    } else {
+                        topBtn.fadeOut();
+                    }
+                });
+            
+                    //スクロールしてトップ
+                    topBtn.click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 500);
+                    return false;
+                });
+            });
+              </code></pre>
+              <p>上で紹介した二つのjQueryを使えばアニメーションで上にスクロールしながらトップに戻ることが出来ます。</p>
+      </section>
+      <section>
+        <h2>参考サイト</h2>
+        <p>http://gimmicklog.main.jp/jquery/212/</p>
+        <p>https://www.will-hp.com/wpblog/web/149/</p>
+        <p>http://skill-stock.hokoweb.com/skill/31/</p>
+        
       </section>
     </div>
     <div id="sub">
