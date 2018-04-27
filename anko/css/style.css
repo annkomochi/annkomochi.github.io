@@ -1,0 +1,364 @@
+@charset "UTF-8";
+
+/* 全体　モバイル */
+
+body {
+  background-image: url(../img/ep_naturalwhite.png);
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+}
+
+p,a,dt,dd {
+  line-height: 1.8em;
+}
+header ,footer{
+  background-color: #410908;
+}
+
+header {
+  height: 90px;
+  color: #eee;
+}
+
+header h1, header p{
+  text-align: center;
+}
+
+header h1{
+  font-size: 32px;
+  line-height: 1.8em;
+}
+
+nav.globalMenuSp {
+  background-color: #410908;
+  position: absolute;
+  top: 90px;
+  text-align: center;
+  width: 100%;
+  display: none;
+  z-index: 99;
+}
+
+nav ul {
+  background: #410908;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+nav ul li {
+  width: 100%;
+  border-bottom: 1px dotted #333;
+}
+
+nav ul li:last-child {
+  border-bottom: none;
+}
+
+nav ul li a {
+  display: block;
+  padding: 1.2em;
+  color: #eee;
+  text-decoration: none;
+}
+
+nav.globalMenuSp ul li a:hover {
+  opacity: 0.7;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+nav.active {
+  display: block;
+}
+
+.navToggle {
+    display: block;
+    position: absolute;
+    right: 13px;
+    top: 12px;
+    width: 42px;
+    height: 51px;
+    cursor: pointer;
+    z-index: 3;
+    text-align: center;
+    background: #410908;
+}
+ 
+.navToggle span {
+    display: block;
+    position: absolute;    /* .navToggleに対して */
+    width: 30px;
+    border-bottom: solid 3px #eee;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+    left: 6px;
+}
+ 
+.navToggle span:nth-child(1) {
+    top: 9px;
+}
+ 
+.navToggle span:nth-child(2) {
+    top: 18px;
+}
+ 
+.navToggle span:nth-child(3) {
+    top: 27px;
+}
+ 
+.navToggle span:nth-child(4) {
+    border: none;
+    color: #eee;
+    font-size: 9px;
+    font-weight: bold;
+    top: 34px;
+}
+
+.snsList {
+  display: none;
+}
+
+/* なかあん そとあんぺーじ */
+.inanko-block-title  {
+  width: 100%;
+  height: 200px;
+  background-image: url(../img/inann.png);
+  color: #eee;
+}
+
+.sotoan-block-title {
+  width: 100%;
+  height: 200px;
+  background-image: url(../img/autoann.png);
+  color: #eee;
+}
+
+.inanko-block-title h2 ,.sotoan-block-title h2 {
+  text-align: center;
+  font-size: 30px;
+  line-height: 200px;
+}
+
+.inanko-contents  {
+  width: 90%;
+  height: 2000px;
+  margin: auto;
+  position: relative;
+  clear: both;
+
+}
+
+.sotoan-contents {
+  width: 90%;
+  height: 1500px;
+  margin: auto;
+  position: relative;
+  clear: both;
+}
+
+.inanko-contents ul li, .sotoan-contents ul li {
+  float: left;
+  width: 40%;
+  margin: 0 5% 5% 5%;
+  max-width: 240px;
+  height: 430px;
+  margin-right: 10px;
+  background-color: darkgoldenrod;
+  border-radius: 10px;
+}
+
+.inanko-contents ul li img, .sotoan-contents ul li img{
+  width: 100%;
+  max-width: 200px;
+}
+
+.inanko-contents dd:last-child, .sotoan-contents dd:last-child {
+  padding: 5px;
+  color: #eee;
+}
+
+.inanko-contents dt, .sotoan-contents dt{
+font-size: 18px;
+text-align: center;
+}
+
+.inanko-contents h3, .sotoan-contents h3 {
+  clear: both;
+  font-size: 20px;
+  margin: 100px 0 30px 10%;
+}
+
+.concept, .form {
+  width: 80%;
+  margin: auto;
+  color: #eee;  
+}
+
+.concept h2, .form h2 {
+  text-align: center;
+  font-size: 30px;
+  line-height: 3em;
+
+}
+
+.form form input {
+  border: none;
+  border-radius: 5px;
+  background-color: #45100f; 
+  color: #9c847c; 
+  width: 100%; 
+  height: 45px;
+}
+
+.form form input[type="submit"] {
+  width: 50%;
+  margin: 0 25%;
+  border-radius: 30px;
+  background-color: #eee;
+  color: #410908;
+}
+
+.form form input[type="submit"]:hover {
+opacity: 0.7;
+}
+
+form ul li {
+  margin-bottom: 20px;
+}
+.form form  textarea { 
+  border: none;
+  border-radius: 5px;
+  background-color: #45100f;
+   color: #9c847c; 
+   width: 100%; 
+   height: 45px;
+  }
+
+  .copy {
+    text-align: center;
+    margin: 80px 0 0 0;
+  }
+
+  @media only screen and (min-width: 961px) {
+
+    /* header */
+
+    header  {
+      z-index: 1;
+    }
+
+    .navToggle {
+      display: none;
+    }
+
+    nav.globalMenuSp {
+      margin-top: -75px;
+      margin-left: 20px;
+      display: block;
+      width: auto;
+      background-color: #410908;
+      z-index: 1;
+    }
+
+    nav.globalMenuSp ul li, .snsList ul li {
+      display: inline-block;
+      width: auto;
+      font-size: 15px;
+      text-align: left;
+      border: none;
+      background-color: #410908;
+    }
+
+    nav ul {
+      background: #410908;
+    }
+
+    nav.globalMenuSp ul li a, .snsList ul li a {
+      color: #eee;
+      text-decoration: none;
+    }
+
+    nav.globalMenuSp ul li a:hover {
+      color: #eee;
+      /* text-decoration: underline; */
+      opacity: 0.7;
+    }
+
+    .snsList {
+      display: initial;
+      position: absolute;
+      top: 30px;
+      right: 200px;
+    }
+
+    .snsList ul li {
+      margin-right: 20px;
+    }
+    
+
+    /* なかあん　そとあん */
+
+    .inanko-contents  {
+      height: 2000px;
+    }
+    
+    .sotoan-contents {
+      height: 1500px;
+    }
+
+    .inanko-contents ul li, .sotoan-contents ul li,.other-ul ul li {
+      max-width: 290px;
+      height: 400px;
+      margin: 0 5% 5% 5%;
+    }
+
+    .inanko-contents ul li:last-child, .sotoan-contents ul li:last-child {
+      margin-right:  0;
+    }
+
+    .inanko-contents ul li img, .sotoan-contents ul li img{
+      width: 100%;
+      max-width: 290px;
+    } 
+
+
+    /* footer */
+
+    .innerfooter {
+      width: 80%;
+      margin: auto;
+    }
+    .concept {
+      float: left;
+      width: 50%;
+      margin-bottom: 50px;
+    }
+
+    .concept p {
+      padding:  0 10%;
+    }
+
+    .form {
+      float: right;
+      width: 50%;
+      margin-bottom: 50px;      
+    }
+
+    form {
+      padding: 0 10%;
+    }
+
+    .form form input, .form form textarea {
+      width: 421px;
+    }
+
+    .form form input[type="submit"] {
+      width: 200px;
+    }
+
+    .copy {
+      clear: both;
+    }
+
+  }
