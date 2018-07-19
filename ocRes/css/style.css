@@ -61,8 +61,13 @@ p {
 #global-nav ul li {
   float: left;
 }
+
 #global-nav ul li a {
   padding: 0 30px;
+}
+
+#global-nav ul li.lastNav span{
+  border: 1px solid #0054a7;
 }
 
 /* Fixed */
@@ -86,6 +91,8 @@ p {
   color: #000;
   padding: 0 20px;
 }
+
+
 
 /* Toggle Button */
 #nav-toggle {
@@ -657,6 +664,11 @@ input[type="submit"] {
     #nav-toggle {
         display: block;
     }
+
+    #top-head #global-nav ul li.lastNav span {
+      border: none;
+    }
+    
     /* #nav-toggle 切り替えアニメーション */
     .open #nav-toggle span:nth-child(1) {
         top: 11px;

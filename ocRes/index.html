@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# article: http://ogp.me/ns/article#">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>オープンキャンパス(体験入学)｜MCL盛岡情報ビジネス専門学校</title>
+  <meta name="description" content="岩手県盛岡市にある専門学校、MCL盛岡情報ビジネス専門学校（モリジョビ）のオープンキャンパス（体験入学）ページです。オープンキャンパス（体験入学）の流れや参加申し込み、無料送迎バスや参加特典はこちら。">
   <link rel="stylesheet" href="css/style.css">
+  <!--// OGP -->
+    <meta property="og:url" content="https://annkomochi.github.io/ocRes/index.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="オープンキャンパス(体験入学)｜MCL盛岡情報ビジネス専門学校" />
+    <meta property="og:description" content="岩手県盛岡市にある専門学校、MCL盛岡情報ビジネス専門学校（モリジョビ）のオープンキャンパス（体験入学）ページです。オープンキャンパス（体験入学）の流れや参加申し込み、無料送迎バスや参加特典はこちら。" />
+    <meta property="og:site_name" content="盛岡情報ビジネス専門学校" />
+    <meta property="og:image" content=" サムネイル画像の URL" />
+    <meta name="twitter:card" content="Summary Card" />
+<meta name="twitter:site" content="@morijyobi_olive" />
 </head>
 
 <body>
@@ -30,7 +40,7 @@
                     <li><a href="#tokuten">三大特典</a></li>
                     <li><a href="#schedule">1日の流れ</a></li>
                     <li><a href="#qa">Q＆A</a></li>
-                    <li><a href="#ocform">参加申し込み</a></li>
+                    <li class="lastNav"><span><a href="#ocform">参加申し込み</a></span></li>
                 </ul>
             </nav>
         </div>
@@ -47,8 +57,8 @@
             mute: true }">
             <div class="innerCont">
               <h1><img src="img/oc/txt_opencampus.png" alt="OPENCAMPUS MCL盛岡情報ビジネス専門学校 IT、コンピュータ、ゲーム、ビジネス、デザイン、 アニメ、マンガを目指しているあなた、 モリジョビのオープンキャンパスにぜひ来てください！"></h1>
-              <p>次回開催◯月◯日</p>
-              <a href="" class="kvOmousikomi">
+              <p>次回開催7月28日</p>
+              <a href="#ocform" class="kvOmousikomi">
                 <span>お申し込みはこちらから！</span>
               </a>
             </div>
@@ -352,7 +362,7 @@
    // #で始まるアンカーをクリックした場合に処理
    $('a[href^=#]').click(function() {
       // スクロールの速度
-      var speed = 400; // ミリ秒
+      var speed = 600; // ミリ秒
       // アンカーの値取得
       var href= $(this).attr("href");
       // 移動先を取得
