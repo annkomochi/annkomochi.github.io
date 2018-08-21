@@ -7,15 +7,21 @@ body {
 }
 
 header {
-  position: fixed;
-  z-index: 900;
   background: #fff;
+  top: 0;
+   left: 0;
+   z-index: 900;
+   width: 200px;
+   height: 100vw;
+   clear: both;
+  position: fixed;
   border-right: 1px solid gainsboro;
 }
 
 header .logo {
   font-size: 0px;
   display: block;
+  float: left;
   margin: 30px 20px;
 }
 header .logo img {
@@ -101,13 +107,6 @@ footer small {
   list-style: none;
  display: initial;
  text-align: center;
-}
-
-@media only screen and (min-width: 641px){
-header {
-  width: 200px;
-  height: 100vw;
-}
 }
 
 @media screen and (max-width: 640px){
