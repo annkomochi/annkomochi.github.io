@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+main {
+  overflow: hidden;
+}
+
 .news , .cd{
   background-image: url(../img/p0074_m.png);
 }
@@ -9,6 +13,8 @@ h2 {
   text-align: center;
   line-height: 50px;
 }
+
+
 
 /* ファーストビュー */
 
@@ -101,7 +107,7 @@ h2 {
 .cd a {
   display: block;
   text-align: right;
-  
+  margin-right: -9.4vw;
 }
 
 /* お品書き */
@@ -133,7 +139,7 @@ h2 {
 
 .menuTop img {
   width: 80%;
-  margin-bottom: 50px;
+  margin-bottom: 10vw;
 }
 
 .menuTop img:nth-of-type(2n+1) {
@@ -145,11 +151,11 @@ h2 {
 
 .menuTop p:nth-of-type(2n) {
   float: right;
-  padding-right: 5vw;
+  padding-right: 3vw;
 }
 .menuTop p:nth-of-type(2n+1) {
   float: left;
-  padding-left: 5vw;
+  padding-left: 3vw;
 }
 
 .menuTop .textinfoBox p{
@@ -177,9 +183,36 @@ h2 {
 .menuTop .button a {
   display: block;
   text-align: right;
+  margin-right: -9.4vw;
 }
 
 /* カワキ家について */
+
+.kawakiInfo {
+  background-image: url(../img/p0074_m.png);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.kawakiInfo::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: 49%;
+  width: 230%;
+  height: 180%;
+  /* margin: 3% -10% 0; */
+  background-color: #E6E67E;
+  -webkit-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transform: rotate(25.6deg);
+  -ms-transform: rotate(25.6deg);
+  transform: rotate(25.6deg);
+  opacity: 0.2;
+  z-index: -1;
+}
 
 .kawakiInfo h2{
   /* -ms-writing-mode: tb-rl;
@@ -203,6 +236,9 @@ h2 {
   text-align: center;
 }
 
+.button {
+    padding: 10vw 0 20vw 0;
+}
 .button img {
   width: 50%;
 }
@@ -210,6 +246,7 @@ h2 {
 .button a {
   display: block;
   text-align: right;
+  margin-right: -9.4vw;
 }
 
 /* 店舗ご案内 */
