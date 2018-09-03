@@ -87,9 +87,9 @@ h2 {
 }
 
 .news iframe {
-  width: 80%;
-  height: 100%;
-  margin: 10% 10%;
+  width: 80vw;
+  height: 300px;
+  margin: 10vw;
 }
 
 
