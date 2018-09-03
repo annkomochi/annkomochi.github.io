@@ -77,13 +77,13 @@ h2 {
 /* 新着情報 */
 
 .news {
-  width: 100vw;
+  width: 100%;
 }
 
 .news iframe {
-  width: 80vw;
-  height: 100vw;
-  margin: 10vw 10vw;
+  width: 80%;
+  height: 100%;
+  margin: 10% 10%;
 }
 
 
@@ -110,19 +110,23 @@ h2 {
   background-image: url(../img/top/background1.jpg);
   color: #FFFFFF;
   clear: both;
+  
 
 }
 
 .menuTop h2 {
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
+  /* -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl; */
   display: block;
-  padding: 30px;
+  padding: 40px 0;
   margin: 0 auto;
   letter-spacing: 4px;
+  line-height: 1.4em;
+  width: 10px;
 }
 
 .menuTop p {
+  -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
 }
@@ -130,18 +134,34 @@ h2 {
 .menuTop img {
   width: 80%;
   margin-bottom: 50px;
-  float: rigth;
 }
 
 .menuTop img:nth-of-type(2n+1) {
   float: right;
 }
+.menuTop img:nth-of-type(2n) {
+  float: left;
+}
 
-.menuTop p:nth-of-type(2) {
+.menuTop p:nth-of-type(2n) {
   float: right;
+  padding-right: 5vw;
+}
+.menuTop p:nth-of-type(2n+1) {
+  float: left;
+  padding-left: 5vw;
+}
+
+.menuTop .textinfoBox p{
+  clear: both;
+  writing-mode: inherit;
+  float: none;
+  text-align: center;
+  line-height: 2.1em;
 }
 
 .menuTop .textBox p {
+  float: none;
   writing-mode: horizontal-tb;
   -ms-writing-mode: horizontal-tb;
   line-height: 47px;
@@ -162,21 +182,23 @@ h2 {
 /* カワキ家について */
 
 .kawakiInfo h2{
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
+  /* -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl; */
   display: block;
   padding: 30px;
   margin: 0 auto;
   letter-spacing: 4px;
+  width: 10px;
+  line-height: 1.4em;
 }
 
 .sam {
-  width: 100vw;
+  width: 100%;
 }
 
 .textbox {
-  writing-mode: horizontal-tb;
-  -ms-writing-mode: horizontal-tb;
+  /* writing-mode: horizontal-tb;
+  -ms-writing-mode: horizontal-tb; */
   line-height: 47px;
   text-align: center;
 }
@@ -198,18 +220,20 @@ h2 {
 }
 
 .tenpoTop h2 {
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
+  /* -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl; */
   display: block;
   padding: 30px;
   margin: 0 auto;
   letter-spacing: 4px;
+  width: 10px;
+  line-height: 1.4em;
 }
 
 /* マップと会社概要 */
 
 .gmap iframe {
-  width: 100vw;
+  width: 100%;
   height: 430px;
 }
 
