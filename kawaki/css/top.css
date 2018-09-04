@@ -178,6 +178,7 @@ h2 {
   clear: both;
   float: none;
   width: 50%;
+  margin-bottom: 0;
 }
 
 .menuTop .button a {
@@ -237,7 +238,7 @@ h2 {
 }
 
 .button {
-    padding: 10vw 0 20vw 0;
+    padding: 5vw 0 15vw 0;
 }
 .button img {
   width: 50%;
