@@ -131,6 +131,7 @@ header .leaf {
 header h1 a{
   margin: 30px 10px;
   width: 240px;
+  height: 41px;
   background: url(../img/LOGO.png) no-repeat;
   background-size: 100%;
 
