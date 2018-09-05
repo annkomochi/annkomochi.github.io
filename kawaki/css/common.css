@@ -130,9 +130,9 @@ header .leaf {
 
 header h1 a{
   margin: 30px 10px;
-  width: 160px;
-  height: 40px;
-  background: url(../img/logoMv.png) no-repeat;
+  /* width: 160px; */
+  height: 80px;
+  background: url(../img/LOGO.png) no-repeat;
   background-size: 100%;
 
 }
