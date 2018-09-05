@@ -13,6 +13,10 @@ body {
   padding: 0px;
 }
 
+main {
+  margin-left: 200px;
+}
+
 
 #nav-toggle {
   display: none; /* ハンバーガーメニューをpcでは非表示*/
@@ -131,6 +135,10 @@ header h1 a{
   background: url(../img/logoMv.png) no-repeat;
   background-size: 100%;
 
+}
+
+main {
+  margin-left: 0;
 }
 
 /* ハンバーガーメニュー */
