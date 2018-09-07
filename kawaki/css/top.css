@@ -95,19 +95,24 @@ h2 {
 
 /* こだわり */
 
+.cd {
+  background-image: url(../img/p0074_m.png);
+}
+
 .cd .textbox{
   width: 90%;
-  margin: 50px auto;
+  padding-top: 50px;
+  margin: 0 auto 20px;
 }
 .cd p {
-  line-height: 47px;
+  line-height: 38px;
   text-align: center;
 }
 
 .cd a {
   display: block;
-  text-align: right;
-  margin-right: -9.4vw;
+  /* text-align: right; */
+  /* margin-right: -9.4vw; */
 }
 
 /* お品書き */
@@ -163,7 +168,7 @@ h2 {
   writing-mode: inherit;
   float: none;
   text-align: center;
-  line-height: 2.1em;
+  line-height: 38px;
 }
 
 .menuTop .textBox p {
@@ -174,17 +179,15 @@ h2 {
   text-align: center;
 }
 
-.menuTop .button img {
+/* .menuTop .button img {
   clear: both;
   float: none;
   width: 50%;
   margin-bottom: 0;
-}
+} */
 
 .menuTop .button a {
   display: block;
-  text-align: right;
-  margin-right: -9.4vw;
 }
 
 /* カワキ家について */
@@ -233,7 +236,7 @@ h2 {
 .textbox {
   /* writing-mode: horizontal-tb;
   -ms-writing-mode: horizontal-tb; */
-  line-height: 47px;
+  line-height: 38px;
   text-align: center;
 }
 
@@ -246,9 +249,28 @@ h2 {
 }
 
 .button a {
+  width: 50vw;
+  height: 45px;
+  margin-left: auto;
+  /* border: 1px solid #000000; */
   display: block;
-  text-align: right;
-  margin-right: -9.4vw;
+  /* text-align: right; */
+  line-height: 45px;
+  /* margin-right: -9.4vw; */
+  border-bottom-left-radius: 15vw;
+  border-top-left-radius: 15vw;
+  padding-left: 30px;
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 3px 3px 3px #0f0f0f;
+}
+
+.menuTop .button a, .tenpoTop .button a {
+  background-color: #9A9441;
+}
+
+.cd .button a, .kawakiInfo .button a {
+  background-image: url(../img/top/p0528_s.png);
 }
 
 /* 店舗ご案内 */
@@ -270,6 +292,10 @@ h2 {
 }
 
 /* マップと会社概要 */
+
+.info {
+  background-image: url(../img/p0074_m.png);
+}
 
 .gmap iframe {
   width: 100%;
@@ -299,9 +325,9 @@ h2 {
 }
 
 .sns {
-  width: 100px;
-  margin: 30px auto 45px auto;
-  padding: auto;
+  width: 140px;
+  margin: 30px auto 0px auto;
+  padding-bottom: 40px;
 }
 
 .sns a {
@@ -311,15 +337,7 @@ h2 {
 
 .facebook {
   float: left;
-  margin-right: 36px;
-}
-
-.facebook img {
-  width: 32px;
-}
-
-.Instagram img {
-  width: 32px;
+  margin-right: 44px;
 }
 
 .sns {
