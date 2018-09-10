@@ -42,6 +42,7 @@
     </div>
   </header>
   <!-- ↓ここから内容 -->
+  <div class="main">
   <main>
     <section class="fv">
         <p><span></span>上にスライド</p>
@@ -123,6 +124,7 @@
 </div>
     </section>
   </main>
+</div>
     <!-- ↑ここまで内容 -->
   <footer>
     <small>©2018．有限会社カワキ商事</small>
@@ -134,7 +136,27 @@ $(function() {
   $(this).toggleClass('open');
   $('.nav-inner').toggleClass('open');
  });
-});</script>
+});
+
+$(function(){
+  var state = false;
+  var scrollpos;
+ 
+  $('#nav-toggle').on('click', function(){
+    if(state == false) {
+      scrollpos = $(window).scrollTop();
+      $('body').addClass('fixed').css({'top': -scrollpos});
+      state = true;
+    } else {
+      $('body').removeClass('fixed').css({'top': 0});
+      window.scrollTo( 0 , scrollpos );
+      state = false;
+    }
+  });
+ 
+});
+
+</script>
 </body>
 
 </html>
