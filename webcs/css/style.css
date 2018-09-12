@@ -1,0 +1,266 @@
+@charset "urf-8";
+
+body {
+  font-family: 'Yu Mincho',sans-serif;
+  background: #ECECEC;
+}
+
+h2 {
+display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+/* トップページ */
+
+.sec1 h2,.sec2 h2 {
+  margin-bottom: 195px;
+  position: relative;
+  font-size: 40px;
+  letter-spacing: 3px;
+}
+
+div[class^="sec"] h2 div {
+  font-size: 20px;
+}
+
+.fv {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: #454552;
+}
+
+.fv .text_box {
+  height: 180px;
+  font-size: 27px;
+  width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.scrolldown {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.scrolldown_cursor {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  background-color: #454552;
+  border-radius: 15px;
+}
+
+.scrolldown_cursor p {
+  line-height: 30px;
+}
+
+.sec1, .sec2, .sec4 {
+  padding-right: 20px;
+  padding-left:20px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.sec1 .sec__inner, .sec2 .sec__inner  {
+  width: 100%;
+  position: relative;
+}
+
+.sec1 .sec__inner .photo {
+  width: 102%;
+    height: 288px;
+    position: absolute;
+    top: 25px;
+    left: -20px;
+    overflow: hidden;
+    background: #454552;
+    z-index: 0;
+}
+
+.sec1 .text_box {
+  margin-left: 25px;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.sec1 .text_box .textbox_inner, .sec2 .text_box .textbox_inner {
+  padding: 25px;
+}
+
+.sec1 .text_box .textbox_inner h3,.sec2 .text_box .textbox_inner h3 {
+  text-align: center;
+  line-height: 1.75;
+}
+
+.sec1 .text_box .textbox_inner p,.sec2 .text_box .textbox_inner p {
+  font-size: 13px;
+  margin-bottom: 10px; 
+  line-height: 2.19;
+}
+
+.sec1 .text_box .textbox_inner .button {
+  width: 98%;
+  height: 45px;
+  border: 1px solid #454552;
+  margin: auto;
+  background: #fff;
+  transition: all 300ms 0s ease;
+}
+
+.sec1 .text_box .textbox_inner .button a,.sec2 .text_box .textbox_inner .button a {
+  width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+  text-decoration: none;
+}
+
+.btn_text {
+  width: 100%;
+    height: 16px;
+    font-size: 16px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.sec1 .text_box .textbox_inner .button:hover,.sec2 .text_box .textbox_inner .button:hover {
+  background: #7474BF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.sec1 .text_box .textbox_inner .button:hover .btn_text, .sec2 .text_box .textbox_inner .button:hover .btn_text {
+  color: #fff;
+}
+
+.sec2 .sec__inner .photo {
+  width: 102%;
+    height: 288px;
+    position: absolute;
+    top: 25px;
+    right: -20px;
+    overflow: hidden;
+    background: #454552;
+    z-index: 0;
+}
+
+.sec2 .text_box {
+  margin-right: 25px;
+  width: 80%;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.sec2 .text_box .textbox_inner .button {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #454552;
+  margin: auto;
+  background: #fff;
+  transition: all 300ms 0s ease;
+}
+
+.sec3 {
+  height: 500px;
+}
+
+.sec4 h2 {
+  margin-bottom: 0px;
+  position: relative;
+  font-size: 40px;
+  letter-spacing: 3px;
+  margin-right: 1rem;
+}
+
+.text_box ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.sec4 .title::after {
+border-top: 1px solid;
+content: "";
+flex-grow: 1;
+margin-left: 20px;
+}
+
+.moricamimg {
+  max-width: 100%;
+}
+
+.gmap {
+  width: 250px;
+  height: 35px;
+  margin: auto;
+  border: 1px solid #000000;
+  border-radius: 20px;
+}
+
+.gmap a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 35px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.linkList {
+  background-color: #348AC7;
+  padding:20px 0;
+}
+
+.linkList a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.linkList .button {
+  width: 250px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  border:1px solid #000000;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+}
+
+footer small {
+  /* padding: 10px 0; */
+}
+
+footer img{
+  width: 40px;
+}
+
+
+
