@@ -1,8 +1,8 @@
 @charset "urf-8";
 
 body {
-  font-family: 'Yu Mincho',sans-serif;
-  background: #ECECEC;
+  font-family:'Yu Mincho',sans-serif;
+  /* background: 99ccff; */
 }
 
 h2 {
@@ -13,12 +13,13 @@ display: block;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     font-weight: bold;
+    text-shadow: 1px 2px 3px #fff;
 }
 
 /* トップページ */
 
 .sec1 h2,.sec2 h2 {
-  margin-bottom: 195px;
+  margin-bottom: 90px;
   position: relative;
   font-size: 40px;
   letter-spacing: 3px;
@@ -32,9 +33,29 @@ div[class^="sec"] h2 div {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: #454552;
+  overflow: hidden;
+  /* color: #fff; */
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	animation: Gradient 15s ease infinite;
 }
 
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.fv video {
+  height: 100%;
+opacity: 0.6;
+}
 .fv .text_box {
   height: 180px;
   font-size: 27px;
@@ -46,6 +67,8 @@ div[class^="sec"] h2 div {
     margin-top: auto;
     margin-bottom: auto;
     text-align: center;
+    color: #fff;
+    line-height: 40px;
 }
 
 .scrolldown {
@@ -81,18 +104,20 @@ div[class^="sec"] h2 div {
 
 .sec1 .sec__inner .photo {
   width: 102%;
-    height: 288px;
+    height: 190px;
     position: absolute;
     top: 25px;
     left: -20px;
     overflow: hidden;
-    background: #454552;
+    background: url(../img/people-2557399_1920.jpg) no-repeat;
+    background-size: cover;
     z-index: 0;
 }
 
 .sec1 .text_box {
   margin-left: 25px;
-  background: #fff;
+  background: #339fb9;
+  color: #fff;
   position: relative;
   z-index: 1;
 }
@@ -153,19 +178,21 @@ div[class^="sec"] h2 div {
 
 .sec2 .sec__inner .photo {
   width: 102%;
-    height: 288px;
+    height: 190px;
     position: absolute;
     top: 25px;
     right: -20px;
     overflow: hidden;
-    background: #454552;
+    background: url(../img/code-1839406_1920.jpg) no-repeat;
+    background-size: cover;
     z-index: 0;
 }
 
 .sec2 .text_box {
   margin-right: 25px;
   width: 80%;
-  background: #fff;
+  background: #24b1b4;
+  color: #fff;
   position: relative;
   z-index: 1;
 }
@@ -180,7 +207,15 @@ div[class^="sec"] h2 div {
 }
 
 .sec3 {
-  height: 500px;
+  /* height: 500px; */
+}
+
+.sec4 {
+  background: #11232e;
+  color: #fff;
+  margin-bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .sec4 h2 {
@@ -191,9 +226,14 @@ div[class^="sec"] h2 div {
   margin-right: 1rem;
 }
 
+.sec4 p.title {
+  font-size: 20px;
+}
+
 .text_box ul {
   list-style-type: none;
   padding: 0px;
+  margin-bottom: 0;
 }
 
 .title {
