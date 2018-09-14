@@ -97,6 +97,8 @@ footer small {
   color: #fff;
 }
 
+@media screen and (min-width:769px){
+
 .navList{
   width: 180px;
   padding-left: 0px;
@@ -114,6 +116,7 @@ footer small {
   font-size: 12px;
 }
 
+}
 /* 
 
 -- 共通とpc版の記述ここまで --
