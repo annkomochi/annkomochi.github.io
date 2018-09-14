@@ -97,6 +97,23 @@ footer small {
   color: #fff;
 }
 
+.navList{
+  width: 180px;
+  padding-left: 0px;
+}
+
+.navList li{
+  text-align: right;
+}
+
+.navList li a{
+  font-size: 19px;
+}
+
+.tel-box{
+  font-size: 12px;
+}
+
 /* 
 
 -- 共通とpc版の記述ここまで --
