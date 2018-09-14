@@ -2,6 +2,7 @@
 
 body {
   font-family:'Yu Mincho',sans-serif;
+  /* line-height: 1.5; */
 }
 
 h2 {
@@ -13,6 +14,18 @@ display: block;
     -webkit-margin-end: 0px;
     font-weight: bold;
     text-shadow: 1px 2px 3px #fff;
+}
+
+footer {
+  text-align: center;
+}
+
+footer small {
+  /* padding: 10px 0; */
+}
+
+footer img{
+  width: 40px;
 }
 
 /* トップページ */
@@ -289,16 +302,45 @@ margin-left: 20px;
   margin-bottom: 20px;
 }
 
-footer {
+
+/* カリキュラムページ */
+
+.midasi {
+  position: relative;
+  height: 250px;
+  background: #454552;
+}
+
+.midasi .text_box {
+  position: absolute;
+  height: 55px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.maincontent {
+  padding: 0 20px;
+}
+
+.first h2, .second h2 {
   text-align: center;
 }
 
-footer small {
-  /* padding: 10px 0; */
+.first .lesson_box, .second .lesson_box  {
+  width: 80%;
+  height: 200px;
+  margin: 20px auto;
+  border: 4px solid #23A6D5;
+  box-sizing: border-box;
 }
 
-footer img{
-  width: 40px;
+.lesson_box p.title {
+  display: block;
+  text-align: center;
+  margin: auto;
+  font-size: 20px;
 }
 
 
