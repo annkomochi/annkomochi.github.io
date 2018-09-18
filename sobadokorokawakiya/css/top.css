@@ -36,6 +36,72 @@
     background-size: cover;
 }
 
+.fv p {
+  position: absolute;
+  right: 0;
+  left: 14.527235%;
+  margin: auto;
+  bottom: 6vw;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  z-index: 2;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.fv p span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  margin: auto;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb 1.5s infinite;
+  animation: sdb 1.5s infinite;
+  box-sizing: border-box;
+}
+
+.fv p a{
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+@-webkit-keyframes sdb {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes sdb {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+
 /* 新着情報 */
 
 .news{
@@ -52,19 +118,20 @@
   font-size: 30px;
 }
 
+.news iframe{
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
 .news p{
   font-size: 20px;
   margin-bottom: 30px;
 }
 
-.news .fb_iframe_widget{
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-.news a{
+.news .links{
   font-size: 18px;
   line-height: 2.5em;
   padding-top: 60px;
@@ -92,12 +159,14 @@
 }
 
 .cd .button{
-  background: url(../img/top/button.png) no-repeat no-repeat;
+  background: url(../img/top/buttonbg1.jpg);
   margin: 80px auto 80px auto;
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-position: center center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 490px;
+  border-radius: 70px 70px;
+  box-shadow: 2px 2px 20px #2c2c2c;
 }
 
 .cd .button a{
@@ -166,12 +235,14 @@
 
 .menuTop .button{
   float: none;
-  background: url(../img/top/button2.png) no-repeat no-repeat;
+  background: #9a9440;
   margin: 80px auto 0px auto;
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-position: center center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 490px;
+  border-radius: 70px 70px;
+  box-shadow: 2px 2px 20px #2c2c2c;
 }
 
 .menuTop .button a{
@@ -234,12 +305,14 @@
 }
 
 .kawakiInfo .button{
-  background: url(../img/top/button.png) no-repeat no-repeat;
+  background: url(../img/top/buttonbg1.jpg);
   margin: 80px auto 80px auto;
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-position: center center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 490px;
+  border-radius: 70px 70px;
+  box-shadow: 2px 2px 20px #2c2c2c;
 }
 
 .kawakiInfo  .button a{
@@ -284,12 +357,14 @@
 
 .tenpoTop .button{
   float: none;
-  background: url(../img/top/button2.png) no-repeat no-repeat;
+  background: #9a9440;
   margin: 80px auto 0px auto;
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-position: center center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 490px;
+  border-radius: 70px 70px;
+  box-shadow: 2px 2px 20px #2c2c2c;
 }
 
 .tenpoTop .button a{
@@ -331,7 +406,7 @@
 
 .dai {
   font-size: 25px;
-  width: 200px!important;
+  width: 18vw!important;
 }
 
 .dai::before {
@@ -369,6 +444,7 @@
 .Instagram img {
   width: 50px;
 }
+
 
 }
 
@@ -474,18 +550,20 @@ h2 {
   width: 100%;
 }
 
-.news iframe {
-  width: 100%;
-  height: 400px;
+.news iframe{
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
 }
 
-#fb-root {
-  display: none;
-}
-
-.fb_iframe_widget, .fb_iframe_widget span,
-.fb_iframe_widget span iframe[style] {
-  width: 100% !important;
+.news .links{
+  font-size: 16px;
+  line-height: 2.5em;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 
@@ -507,20 +585,39 @@ h2 {
 }
 
 .cd .button{
-  background: url(../img/top/button.png) no-repeat no-repeat;
-  background-size: 80vw;
-  margin: 80px auto 80px auto;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-position: center center;
+  position: relative;
+  background: url(../img/top/buttonbg1.jpg);
+  margin: 80px -15vw 80px auto;
+  text-align: left;
+  letter-spacing: 3px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10vw;
+  width: 90vw;
+  border-radius: 70px 70px;
+  box-shadow: 2px 2px 20px #2c2c2c;
 }
 
 .cd .button a{
-  font-size: 22px;
+  font-size: 18px;
   text-decoration: none;
   color: #2c2c2c;
-  
+}
+
+.cd .button a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -50vw;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  border-left: 1px solid #222;
+  border-bottom: 1px solid #222;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  box-sizing: border-box;
 }
 
 .cd .button a:hover{
@@ -592,21 +689,39 @@ h2 {
 }
 
 .menuTop .button{
-  float: none;
-  background: url(../img/top/button2.png) no-repeat no-repeat;
-  background-size: 80vw;
-  margin: 80px auto 0px auto;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-position: center center;
+  position: relative;
+  background: #9a9440;
+  margin: 80px -15vw 80px auto;
+  text-align: left;
+  letter-spacing: 3px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10vw;
+  width: 90vw;
+  border-radius: 70px 70px;
+  box-shadow: 2px 2px 20px #2c2c2c;
 }
 
 .menuTop .button a{
-  font-size: 22px;
+  font-size: 18px;
   text-decoration: none;
   color: #FFFFFF;
-  letter-spacing: 5px;
+}
+
+.menuTop .button a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -50vw;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  border-left: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  box-sizing: border-box;
 }
 
 .menuTop .button a:hover{
@@ -664,20 +779,39 @@ h2 {
 }
 
 .kawakiInfo .button{
-  background: url(../img/top/button.png) no-repeat no-repeat;
-  background-size: 80vw;
-  margin: 80px auto 50px auto;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-position: center center;
+  position: relative;
+  background: url(../img/top/buttonbg1.jpg);
+  margin: 80px -15vw 80px auto;
+  text-align: left;
+  letter-spacing: 3px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10vw;
+  width: 90vw;
+  border-radius: 70px 70px;
+  box-shadow: 2px 2px 20px #2c2c2c;
 }
 
 .kawakiInfo .button a{
-  font-size: 22px;
+  font-size: 18px;
   text-decoration: none;
   color: #2c2c2c;
-  
+}
+
+.kawakiInfo .button a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -50vw;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  border-left: 1px solid #222;
+  border-bottom: 1px solid #222;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  box-sizing: border-box;
 }
 
 .kawakiInfo .button a:hover{
@@ -710,21 +844,39 @@ h2 {
 }
 
 .tenpoTop .button{
-  float: none;
-  background: url(../img/top/button2.png) no-repeat no-repeat;
-  background-size: 80vw;
-  margin: 80px auto 0px auto;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-position: center center;
+  position: relative;
+  background: #9a9440;
+  margin: 80px -15vw 80px auto;
+  text-align: left;
+  letter-spacing: 3px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10vw;
+  width: 90vw;
+  border-radius: 70px 70px;
+  box-shadow: 2px 2px 20px #2c2c2c;
 }
 
 .tenpoTop .button a{
-  font-size: 22px;
+  font-size: 18px;
   text-decoration: none;
   color: #FFFFFF;
-  letter-spacing: 5px;
+}
+
+.tenpoTop .button a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -50vw;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  border-left: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  box-sizing: border-box;
 }
 
 .tenpoTop .button a:hover{
