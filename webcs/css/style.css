@@ -152,7 +152,7 @@ opacity: 0.6;
 .sec1 .text_box .textbox_inner .button {
   width: 98%;
   height: 45px;
-  border: 1px solid #454552;
+  /* border: 1px solid #454552; */
   margin: auto;
   background: #fff;
   transition: all 300ms 0s ease;
@@ -178,10 +178,8 @@ opacity: 0.6;
     margin: auto;
 }
 
-.sec1 .text_box .textbox_inner .button:hover,.sec2 .text_box .textbox_inner .button:hover {
-  background: #7474BF;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.sec1 .text_box .textbox_inner .button:hover,.sec2 .text_box .textbox_inner .button:hover,form .button:hover, .gmap:hover {
+  background: #E85A71;
 }
 
 .sec1 .text_box .textbox_inner .button:hover .btn_text, .sec2 .text_box .textbox_inner .button:hover .btn_text {
@@ -212,7 +210,7 @@ opacity: 0.6;
 .sec2 .text_box .textbox_inner .button {
   width: 100%;
   height: 45px;
-  border: 1px solid #454552;
+  /* border: 1px solid #454552; */
   margin: auto;
   background: #fff;
   transition: all 300ms 0s ease;
@@ -268,7 +266,7 @@ margin-left: 20px;
   width: 250px;
   height: 35px;
   margin: auto;
-  border: 1px solid #000000;
+  border: 1px solid   #ECECEC;;
   border-radius: 20px;
 }
 
@@ -279,7 +277,7 @@ margin-left: 20px;
   text-align: center;
   line-height: 35px;
   text-decoration: none;
-  color: #000000;
+  color: #ECECEC;
 }
 
 .linkList {
@@ -305,10 +303,14 @@ margin-left: 20px;
 
 /* カリキュラムページ */
 
+.maincontent {
+  background: #ECECEC;
+}
+
 .midasi {
   position: relative;
   height: 250px;
-  background: #454552;
+  background: #24b1b4;
 }
 
 .midasi .text_box {
@@ -321,7 +323,7 @@ margin-left: 20px;
 }
 
 .maincontent {
-  padding: 0 20px;
+  padding: 30px 20px;
 }
 
 .first h2, .second h2 {
@@ -329,19 +331,67 @@ margin-left: 20px;
 }
 
 .first .lesson_box, .second .lesson_box  {
-  width: 80%;
-  height: 200px;
-  margin: 20px auto;
-  border: 4px solid #23A6D5;
+  position: relative;
+  width: 90%;
+  margin: 40px auto 50px auto;
+  padding: 10px;
+background: #fff;
+  border-left: 45px solid #E85A71;
   box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.first .lesson_box::after, .second .lesson_box::after {
+  content: "▼";
+  position: absolute;
+  font-size: 50px;
+  color: #E85A71;
+  left: -48px;
+  bottom: -46px;
 }
 
 .lesson_box p.title {
   display: block;
   text-align: center;
-  margin: auto;
-  font-size: 20px;
+  margin:auto;
+  line-height: 1.5;
+  padding: 15px 0;
+  font-size: 18px;
 }
 
+.label {
+  color: #ECECEC;
+  position: absolute;
+  writing-mode: vertical-rl;
+  top:50px;
+  left: -47px;
+  letter-spacing: 10px;
+}
+
+/* フォーム */
+
+form {
+  width: 80%;
+  margin: auto;
+}
+
+form input {
+  height: 50px;
+  /* border-radius: 10px; */
+  width: 100%;
+  border: none;
+}
+
+form p {
+  color: #000000;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+form .button {
+  width: 50%;
+  margin: 20px auto;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
 
 
