@@ -4,7 +4,7 @@
 
   .company {
     width: 100%;
-    background-image: url(../img/background1.png);
+    background: url(../img/background1.png) fixed;
   }
 
   .company h2{
@@ -60,6 +60,7 @@
   top: -90px;
   left: 0;
   right: 0;
+  line-height: 1.5;
 }
 
 .speech img  {
