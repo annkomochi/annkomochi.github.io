@@ -5,6 +5,10 @@ body {
   /* line-height: 1.5; */
 }
 
+main {
+  background: #ECECEC;
+}
+
 h2 {
 display: block;
     font-size: 1.5em;
@@ -304,7 +308,15 @@ margin-left: 20px;
 /* カリキュラムページ */
 
 .maincontent {
-  background: #ECECEC;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.cbox {
+  width: 50%;
+  min-width: 300px;
+  margin: 0 auto;
 }
 
 .midasi {
@@ -323,7 +335,7 @@ margin-left: 20px;
 }
 
 .maincontent {
-  padding: 30px 20px;
+  padding: 0px 20px;
 }
 
 .first h2, .second h2 {
@@ -395,3 +407,87 @@ form .button {
 }
 
 
+/* とくちょう */
+
+.tt {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.tt span {
+  color: #23A6D5;
+}
+
+#futurearea {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fbox {
+  position: relative;
+  width: 300px;
+  margin: 20px auto;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.fbox img {
+  width: 100%;
+}
+
+.fbox .textbox {
+  padding: 20px;
+  line-height: 1.5;
+}
+
+.fbox .textbox .ftitle {
+  color: #23A6D5;
+}
+
+.f1::before {
+content: "特徴1";
+position: absolute;
+top: 0;
+left: 0;
+width: 50px;
+height: 50px;
+background-color: #E73C7E;
+color: #ECECEC;
+line-height: 50px;
+text-align: center;
+font-size: 12px;
+}
+
+.f2::before {
+  content: "特徴2";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #E73C7E;
+  color: #ECECEC;
+  line-height: 50px;
+  text-align: center;
+  font-size: 12px;
+  }
+
+  .f3::before {
+    content: "特徴3";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #E73C7E;
+    color: #ECECEC;
+    line-height: 50px;
+    text-align: center;
+    font-size: 12px;
+    }
+
+    @media screen and (max-width:768px) {
+      .pc {
+        display: none;
+      }
+    }
