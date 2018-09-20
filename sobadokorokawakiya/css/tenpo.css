@@ -158,6 +158,7 @@
   
     
     .access {
+      line-height: 1.5;
       width: 60%;
       margin: auto;
       margin-bottom: 25px;
@@ -178,6 +179,11 @@
       -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
       text-align: center;
+    }
+
+    .access .car img {
+      margin: 20px 0;
+      margin-left: -200px;
     }
   
     .access .bus .atitle {
@@ -369,6 +375,12 @@
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     text-align: center;
+  }
+
+  .access .car img {
+    width: 90%;
+    margin: 20px 0;
+    margin-left: 0px;
   }
 
   .access .bus .atitle {
