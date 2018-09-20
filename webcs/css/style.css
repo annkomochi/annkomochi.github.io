@@ -412,6 +412,7 @@ form .button {
 .tt {
   text-align: center;
   margin-bottom: 50px;
+  width: 100%;
 }
 
 .tt span {
@@ -421,6 +422,7 @@ form .button {
 #futurearea {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .fbox {
