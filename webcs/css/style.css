@@ -362,13 +362,13 @@ background: #fff;
   bottom: -46px;
 }
 
-.lesson_box p.title {
+.lesson_box .title {
   display: block;
   text-align: center;
   margin:auto;
   line-height: 1.5;
   padding: 15px 0;
-  font-size: 18px;
+  color: #23A6D5;
 }
 
 .label {
@@ -492,4 +492,38 @@ font-size: 12px;
       .pc {
         display: none;
       }
+    }
+
+    @media screen and (min-width:769px) {
+      .fv video {
+        width: 100vw;
+      }
+
+      .sec1 .sec__inner .photo{
+        width: 890px;
+        height: 400px;
+        margin: auto 50px;
+      }
+
+      .sec1 .sec__inner .text_box {
+        max-width: 480px;
+        /* height: 300px; */
+        margin-left:600px;
+      }
+
+      .sec2 .sec__inner .photo{
+        width: 890px;
+        height: 400px;
+        margin: auto 50px;
+      }
+      .sec2 .sec__inner .text_box {
+        max-width: 480px;
+        margin-left:200px;
+      }
+
+      .sec2 .sec__inner  h2 {
+        text-align: right;
+        margin-right: 30px;
+      }
+
     }
