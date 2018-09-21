@@ -125,10 +125,10 @@
   /* ↓Google Map */
   .map {
     position: relative;
-    padding-bottom: 56.25%;
+    padding-bottom: 370px;
     padding-top: 30px;
     height: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     }
      
     .map iframe,
@@ -166,7 +166,7 @@
   
     .access .abox {
       position: relative;
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid #DBD5D5;
       padding: 20px 0;
       padding-left: 40%;
     }
@@ -350,7 +350,7 @@
     color: #fff;
     font-size: 1.7rem;
     font-weight: 500;
-    margin-bottom: 1em;
+    margin-bottom: 10px;
   }
 
   
@@ -362,7 +362,7 @@
 
   .access .abox {
     position: relative;
-    border-bottom: 1px solid #fff;
+    /* border-bottom: 1px solid #DBD5D5; */
     padding: 20px 0;
     padding-left: 18%;
   }
@@ -375,6 +375,10 @@
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     text-align: center;
+  }
+
+  .access .car {
+    margin-top: 0;
   }
 
   .access .car img {
