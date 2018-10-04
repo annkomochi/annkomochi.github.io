@@ -7,12 +7,13 @@
   <title>盛岡情報ビジネス専門学校 WEBアプリケーションコース | カリキュラム</title>
   <link rel="stylesheet" href="css/normalize.css">
      <!-- drawer.css -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="jquery.fatNav.min.css">
+  <link rel="stylesheet" href="css/validationEngine.jquery.css">
 </head>
-<body class="drawer drawer--right">
+<body id="seikyu">
     <header>
+        <div class="logo"><a href="top.html"><img src="img/logo.png" alt=""></a></div>
         <div class="fat-nav">
             <div class="fat-nav__wrapper">
                 <ul>
@@ -33,21 +34,21 @@
   </div>
 <main>
     <div class="maincontent">
-        <form action="">
+        <form id="seikyuform" action="">
           <label>
             <p>氏名</p>
-            <input type="name" value="">
+            <input type="name" value="" class="validate[required]" data-prompt-position="bottomLeft">
           </label>
           <p>メールアドレス</p>
-          <input type="email"" value="">
+          <input type="email"" value="" class="validate[required,custom[email]]" data-prompt-position="bottomLeft">
         </label>
           <label>
             <p>郵便番号</p>
-            <input type="text" value="">
+            <input type="text" value="" class="validate[required,custom[number]" data-prompt-position="bottomLeft">
           </label>
           <label>
             <p>住所</p>
-            <input type="name" value="">
+            <input type="name" value="" class="validate[required]" data-prompt-position="bottomLeft">
           </label>
           <div class="button"><input type="button" value="送信する"></div>
         </form>
@@ -76,9 +77,23 @@
   <!-- js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="js/jquery.fatNav.min.js"></script>
+  <script src="js/jquery.validationEngine.js"></script>
+<script src="js/jquery.validationEngine-ja.js"></script>
   <script>
       $(function() {
           $.fatNav();
       });
+
+
+        $(function(){
+          jQuery("#seikyuform").validationEngine();
+        });
+      </script>
+      <script>
+        $(document).ready(function () {
+          $("#seikyuform").validationEngine({
+            promptPosition: "topRight:-35"
+          });
+        });
       </script>
 </html>
