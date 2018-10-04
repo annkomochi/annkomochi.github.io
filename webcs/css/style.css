@@ -3,7 +3,36 @@
 body {
   font-family:'Yu Mincho',sans-serif;
   /* line-height: 1.5; */
+  /* position: relative; */
 }
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+header h1 {
+  float: left;
+  max-width: 600px;
+}
+
+header  button {
+  background-color: #339fb9 !important;
+  border-radius: 40px;
+  margin : 10px;
+}
+
+.drawer-hamburger-icon, .drawer-hamburger-icon::after, .drawer-hamburger-icon::before{
+  /* background-color: #fff !important; */
+}
+
+.gnav {
+  display: flex;
+  float: right;
+}
+
 
 main {
   background: #ECECEC;
@@ -284,14 +313,22 @@ margin-left: 20px;
   color: #ECECEC;
 }
 
+footer {
+  background-color: #12437d;
+}
+
+.logo, .sns {
+  /* background-color: #195ba9; */
+}
+
 .linkList {
-  background-color: #348AC7;
+  /* background-color: #12437d; */
   padding:20px 0;
 }
 
 .linkList a {
   text-decoration: none;
-  color: #000000;
+  color: #ffffff;
 }
 
 .linkList .button {
@@ -402,7 +439,7 @@ form p {
 
 form .button {
   width: 50%;
-  margin: 20px auto;
+  margin: 40px auto;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
@@ -525,5 +562,48 @@ font-size: 12px;
         text-align: right;
         margin-right: 30px;
       }
+      .sec4 {
+        position: relative;
+      }
 
+      .sec4 .sec__inner  h2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .sec4 .sec__inner img{
+        max-width: 100%;
+      }
+
+      .sec4 .sec__inner {
+        display: flex;
+        /* width: 90%;
+        margin: auto; */
+      }
+
+      .sec4 .sec__inner .text_box {
+        width: 500px;
+        padding: 0 10%;
+        margin-top: 50px;
+      }
+
+   
+
+      .linkList {
+        width: 800px;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      /* フォーム */
+      form  {
+        width: 400px;
+        margin: 60px auto;
+      }
+
+      form input[type="button"] {
+        width: 100%;
+      }
     }

@@ -7,9 +7,21 @@
   <title>盛岡情報ビジネス専門学校 WEBアプリケーションコース</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="jquery.fatNav.min.css">
 </head>
 <body> 
-  <header></header>
+  <header>
+    <div class="fat-nav">
+        <div class="fat-nav__wrapper">
+            <ul>
+                <li><a href="top.html"">TOP</a></li>
+                <li><a href="feature.html">特徴</a></li>
+                <li><a href="curriculum.html">カリキュラム</a></li>
+                <li><a href="seikyu.html">資料請求</a></li>
+            </ul>
+        </div>
+    </div>
+  </header>
 <main>
     <section class="fv">
         <video src="img/mcl_movie.mp4" autoplay loop muted></video>
@@ -76,9 +88,9 @@
           </h2>
           <div class="img">
             <img class="moricamimg" src="img/morijyobi.png" alt="盛岡情報ビジネス専門学校 校舎">
-            <p>盛岡情報ビジネス専門学校</p>
           </div>
           <div class="text_box">
+              <p>盛岡情報ビジネス専門学校</p>
             <ul>
               <li>
                 <p class="title">ADDRESS</p>
@@ -94,7 +106,7 @@
               <li>
                   <p class="title">ACCESS</p>
                   <div class="gmap">
-                    <a href="">Googleマップを開く</a>
+                    <a href="https://goo.gl/maps/sBLTibgFfek">Googleマップを開く</a>
                   </div>
               </li>
             </ul>
@@ -111,15 +123,24 @@
         <div class="button">オープンキャンパス</div>
       </a>
     </div>
-      <div class="logo">
-        <small>盛岡情報ビジネス専門学校<br>WEBアプリケーションコース</small>
-      </div>
       <div class="sns">
         <img src="img/facebook.png" alt="">
         <img src="img/Instagram.png" alt="">
         <img src="img/twitter.png" alt="">
         <img src="img/youtube.png" alt="">
       </div>
+      <div class="logo">
+          <small>盛岡情報ビジネス専門学校<br>WEBアプリケーションコース</small>
+        </div>
   </footer>
+  <!-- js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="js/jquery.fatNav.min.js"></script>
+  <script>
+      $(function() {
+          $.fatNav();
+      });
+      </script>
+        
 </body>
 </html>

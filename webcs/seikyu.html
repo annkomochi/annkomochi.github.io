@@ -6,9 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>盛岡情報ビジネス専門学校 WEBアプリケーションコース | カリキュラム</title>
   <link rel="stylesheet" href="css/normalize.css">
+     <!-- drawer.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="jquery.fatNav.min.css">
 </head>
-<body>
+<body class="drawer drawer--right">
+    <header>
+        <div class="fat-nav">
+            <div class="fat-nav__wrapper">
+                <ul>
+                    <li><a href="top.html"">TOP</a></li>
+                    <li><a href="feature.html">特徴</a></li>
+                    <li><a href="curriculum.html">カリキュラム</a></li>
+                    <li><a href="seikyu.html">資料請求</a></li>
+                </ul>
+            </div>
+        </div>
+      </header>
   <div class="midasi">
     <div class="text_box">
         <h2>
@@ -58,4 +73,12 @@
       </div>
   </footer>
 </body>
+  <!-- js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="js/jquery.fatNav.min.js"></script>
+  <script>
+      $(function() {
+          $.fatNav();
+      });
+      </script>
 </html>
