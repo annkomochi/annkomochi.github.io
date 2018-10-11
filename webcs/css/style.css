@@ -20,6 +20,30 @@ header h1 {
   max-width: 600px; */
 }
 
+header .seikyuhead {
+position: fixed;
+background: #12437d;
+top: 50px;
+right: 0;
+}
+
+header .seikyuhead a {
+  display: block;
+  width: 50px;
+  height: 100px;
+  line-height: 50px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-size: 18px;
+}
+
+header .seikyuhead a:hover {
+ background-color: #E73C7E;
+}
+
 header .logo img {
   max-width: 400px;
   width: 80%;
@@ -601,11 +625,20 @@ font-size: 12px;
       .pc {
         display: none;
       }
+
+      .scrolldown a {
+        left: 45%;
+      }
     }
 
     @media screen and (min-width:769px) {
       .fv video {
         width: 100vw;
+      }
+
+      .fv .text_box {
+        font-size: 50px;
+        line-height: 1.5;
       }
 
       .sec1 .sec__inner .photo{
