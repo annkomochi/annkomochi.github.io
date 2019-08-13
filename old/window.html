@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>windowオブジェクト open close focusについて</title>
+</head>
+<style>
+  body,p,h1,pre {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    width: 70%;
+    margin: auto;
+    background-color:#FFEED5;
+  }
+
+  .main {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  table th {
+    padding-right: 15px;
+  }
+
+  .option {
+    margin: 10px;
+    font-size: 16px;
+  }
+
+  .opt {
+    background-color: ghostwhite;
+    width: 400px;
+    margin-left: 120px;
+    font-size: 15px;
+  }
+
+  p {
+    color: #9FBCDF;
+  }
+
+  h1,h2 {
+    color: #79A1D4;
+  }
+
+  table th {
+    color: #79A1D4;
+  }
+
+  table td {
+    color: #9FBCDF;
+  }
+
+  h1 {
+    margin-top: 50px;
+  }
+</style>
+<body>
+    <label for="fish">移動:</label>
+    <select name="fish" id="fish">
+      <option value="">--選択してください--</option>
+      <option value="maguro.html">マグロ</option>
+      <option value="sarmon.html">サーモン</option>
+      <option value="egg.html">たまご</option>
+      <option value="git.html">gitの使い方とgithub-pagesの作り方</option>
+      <option value="favorite.html">お気に入りの画像集へ</option>    
+      <option value="brouser.html">ブラウザの確認</option>
+      <option value="window.html">windowオブジェクト</option>
+      <option value="console.html">consoleオブジェクト</option>
+      <option value="timer.html">カウントダウンタイマー</option>
+      <option value="pull.html">プルダウンメニュー</option>
+    </select>
+
+  <h1>Window.openとは</h1>
+  <p>window.openは、新しくウィンドウを開かせるメソッドです。</p>
+  <h2>サンプルコード</h2>
+  <p>htmlコード</p>
+  <pre class="prettyprint">&lt;input type="button" value="window.open サンプル" id="window"&gt;</pre>
+  <p>javascriptコード</p>
+  <pre class="prettyprint">
+var windowopn = function(){
+var win = window.open('subwin.html','subwin','width=640,height=480');
+}
+
+document.getElementById('window').addEventListener('click',windowopn,false);
+</pre>
+<h2>サンプルプログラム</h2>
+<input type="button" value="window.open サンプル" id="window">
+<h2>説明</h2>
+  <p class="main">window.open(url','ウィンドウ名','オプション')</p>
+  <table>
+    <tr>
+      <th>URL</th>
+      <td>新しく開くウィンドウのURLを指定する</td>
+    </tr>
+    <tr>
+        <th>ウィンドウ名</th>
+        <td>特に指定がない場合nullでも大丈夫です。新しいウィンドウのタイトルではありません。</td>
+      </tr>
+      <tr>
+          <th>オプション</th>
+          <td>新規ウィンドウに様々な指定をすることができる。</td>
+        </tr>
+  </table>
+  <div class="opt">
+  <p class="option">オプション一覧(一部) </p>
+  <table>
+    <tr>
+      <th>オプション</th>
+      <td>値</td>
+      <td>説明</td>
+    </tr>
+    <tr>
+      <th>width</th>
+      <td>数値</td>
+      <td>ウィンドウの幅を指定</td>
+    </tr>
+    <tr>
+        <th>height</th>
+        <td>数値</td>
+        <td>ウィンドウの高さを指定</td>
+      </tr>
+      <tr>
+          <th>left</th>
+          <td>数値</td>
+          <td>ウィンドウの表示位置　左</td>
+      </tr>
+      <tr>
+            <th>top</th>
+            <td>数値</td>
+            <td>ウィンドウの表示位置　上</td>
+        </tr>
+        <tr>
+          <th>menubar</th>
+          <td>yes/no</td>
+          <td>メニューバーを表示するか</td>
+        </tr>
+        <tr>
+            <th>toolbar</th>
+            <td>yes/no</td>
+            <td>ツールバーを表示するか</td>
+          </tr>
+          <tr>
+              <th>location</th>
+              <td>yes/no</td>
+              <td>アドレスバーを表示するか</td>
+            </tr>
+            <tr>
+                <th>status</th>
+                <td>yes/no</td>
+                <td>ステータスバーを表示するか</td>
+              </tr>
+              <tr>
+                  <th>resizable</th>
+                  <td>yes/no</td>
+                  <td>リサイズを許可するか</td>
+                </tr>
+                <tr>
+                    <th>scrollbars</th>
+                    <td>yes/no</td>
+                    <td>スクロールバーを表示するか</td>
+                  </tr>
+  </table>
+  </div>
+  <!-- window.close -->
+  <h1>Window.closeとは</h1>
+  <p>現在のウィンドウを閉じるメソッドです。</p>
+  <h2>サンプルコード</h2>
+  <p>htmlコード</p>
+  <pre class="prettyprint">&lt;input type="button" value="閉じる" id="windowclose"&gt;</pre>
+  <p>javascriptコード</p>
+  <pre class="prettyprint">
+document.getElementById('windowclose').addEventListener('click',function(){
+window.open('about:blank','_self').close();
+})
+</pre>
+<h2>サンプルプログラム</h2>
+  <input type="button" value="window.close サンプル" id="window2"><br>
+  <h2>説明</h2>
+  <p class="main">window.close</p>
+  <p>ウィンドウを閉じるメソッドですが、現在これをただ書くだけでは閉じることは出来ないみたいです。</p>
+  <p>サンプルコードでは</p>
+  <p class="main">window.open('about:blank','_self').close();</p>
+  <p>と言う様に書いています。これでどのブラウザでもウィンドウを閉じることができます。</p>
+
+
+  <h1>Window.focus</h1>
+  <p>指定したウィンドウにフォーカスを当てて最前面に表示する。</p>
+  <h2>サンプルコード</h2>
+  <p>htmlコード</p>
+  <pre class="prettyprint">&lt;input type="button" value="クリックして新しいWindowを開く"  id="window4"&gt;
+&lt;input type="button" value="フォーカスを当てる" id="window5&gt;</pre>
+  <p>javascriptコード</p>
+  <pre class="prettyprint">
+var win
+// window.openであらかじめウィンドウを開いておく
+var windowopn = function(){
+win = window.open('subwin.html','subwin','width=640,height=480');
+}
+
+// フォーカスをあてる。
+var windowfocus = function() {
+  win.focus();
+}
+
+document.getElementById('window4').addEventListener('click',windowopn,false);
+document.getElementById('window5').addEventListener('click',windowfocus,false);
+</pre>
+<h2>サンプルプログラム</h2>
+  <input type="button" value="クリックして新しいWindowを開く"  id="window4">
+  <input type="button" value="フォーカスを当てる" id="window5">
+  <h2>説明</h2>
+  <p class="main">window.focus</p>
+  <p>この一文だけでフォーカスを当て最前面に表示することができます。</p>
+
+  <script>
+    var win
+    //window.open
+  var windowopn = function(){
+  win = window.open('subwin.html','subwin','width=640,height=480');
+  }
+
+  //window.close
+  var windowclose = function(){
+    window.open('subwin2.html','subwin2','width=640,height=480');
+  }
+
+  var windowfocus = function() {
+    win.focus();
+  }
+
+
+  document.getElementById('window').addEventListener('click',windowopn,false);
+  document.getElementById('window2').addEventListener('click',windowclose,false);
+  document.getElementById('window4').addEventListener('click',windowopn,false);
+  document.getElementById('window5').addEventListener('click',windowfocus,false);
+
+  </script>
+   <script>
+      document.addEventListener('DOMContentLoaded' , function(){
+        document.getElementById('fish').addEventListener('change',function(){
+          location.href = this.value;
+        },false)
+      },false);
+    </script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
+</body>
+</html>

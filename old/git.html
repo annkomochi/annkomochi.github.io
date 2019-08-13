@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>寿司ネタ</title>
+  <style>
+    .pull {
+      text-align: center;
+    }
+    .githubtext {
+    width: 600px;
+    margin: auto;
+  }
+  .tagu {
+    width: 90%;
+    background-color: gainsboro;
+    border: 1px solid gray;
+  }
+
+  select , label {
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+  <div class="pull">
+  <label for="fish">リンク:</label>
+  <select name="fish" id="fish">
+      <option value="">--選択してください--</option>
+    <option value="maguro.html">マグロ</option>
+    <option value="sarmon.html">サーモン</option>
+    <option value="egg.html">たまご</option>
+    <option value="git.html">gitの使い方とgithub-pagesの作り方</option>
+    <option value="favorite.html">お気に入りの画像集へ</option>
+    <option value="brouser.html">ブラウザの確認</option>
+    <option value="window.html">windowオブジェクト</option>
+    <option value="console.html">consoleオブジェクト</option>
+    <option value="timer.html">カウントダウンタイマー</option>
+    <option value="pull.html">プルダウンメニュー</option>
+  </select><br>
+  <img src="Octocat.png" width="200px">
+</div>
+<div class="githubtext">
+  <h2>git使い方</h2>
+  <h2>github-pagesの作り方</h2>
+  <p>１.github Pagess用のリポジトリ作成</p>
+  <p>New　repositoryのPepository name 欄にユーザー名.github.ioを入力し、<br>Create reppositoryボタンをクリック</p> 
+  <p>2.ローカルにリポジトリをクローンする</p>
+  <p>ここからはローカルでの作業になります。<br>ローカルのターミナルに次のように入力します</p>
+  <p class="tagu">  git clone https://github.com/username/username.github.io</p>
+  <p>これでリポジトリがローカルにも反映されました。 <br>実際にリポジトリに移動して確認してみましょう</p>
+  <p  class="tagu">  cd username.github.io</p>
+  <p>移動できましたか？これで作成できました！おめでとうございます。</p>
+  <h2>github-pagesの更新の仕方</h2>
+  <p>htmlファイルを作成します</p>
+  <p>次にステージングしコミットをします</p>
+    <p class="tagu">  git add ファイル名</p>
+    <p class="tagu">  git commit -m "Initial commit"</p>
+    <p>GitHubへプッシュ</p>
+    <p class="tagu">  git push -u origin master</p>
+    <p>更新が完了しました。おめでとうございます。</p>
+
+</div>
+  <script>
+      document.addEventListener('DOMContentLoaded' , function(){
+        document.getElementById('fish').addEventListener('change',function(){
+          location.href = this.value;
+        },false)
+      },false);
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>寿司ネタ</title>
+  <style>
+    body {
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+    <label for="fish">移動:</label>
+  <select name="fish" id="fish">
+      <option value="">--選択してください--</option>
+    <option value="maguro.html">マグロ</option>
+    <option value="sarmon.html">サーモン</option>
+    <option value="egg.html">たまご</option>
+    <option value="git.html">gitの使い方とgithub-pagesの作り方</option>
+    <option value="favorite.html">お気に入りの画像集へ</option>
+    <option value="brouser.html">ブラウザの確認</option>
+    <option value="window.html">windowオブジェクト</option>
+    <option value="console.html">consoleオブジェクト</option>
+    <option value="timer.html">カウントダウンタイマー</option>
+    <option value="pull.html">プルダウンメニュー</option>
+  </select><br>
+  <img src="1200px-Fish4499_-_Flickr_-_NOAA_Photo_Library.jpg" width="20%">
+  <script>
+    document.addEventListener('DOMContentLoaded' , function(){
+      document.getElementById('fish').addEventListener('change',function(){
+        location.href = this.value;
+      },false)
+    },false);
+  </script>
+</body>
+</html>

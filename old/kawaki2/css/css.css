@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+#nav-toggle {
+  display: none;
+}
+
+.global-nav ul{
+  display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    list-style-type: none;
+}
+
+.global-nav ul a{
+  display: block;
+  height: 40px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+
+
+header {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100%;
+    width: 200px;
+}
+
+header h1 a{
+  display: block;
+  height: 200px;
+  background: url(../img/logoPC.png) no-repeat;
+  margin: 70px;
+}
+
+
+
+
+@media only screen and (max-width: 768px){
+
+  header {
+  width: 100%;
+  height: 200px;
+}
+#nav-toggle {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#nav-toggle span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #006A46;
+  left: 0;
+  -webkit-transition: .35s ease-in-out;
+  -moz-transition: .35s ease-in-out;
+  transition: .35s ease-in-out;
+}
+
+#nav-toggle span:nth-child(2) {
+  top: 13px;
+}
+
+#nav-toggle span:nth-child(3) {
+  top: 26px;
+}
+
+#nav-toggle span:nth-child(3)::before {
+  content: "メニュー";
+  font-size: 10px;
+  font-weight: bold;
+  color: #006A46;
+  
+}
+
+#nav-toggle.open span:nth-of-type(1) {
+  -webkit-transform: translateY(15px) rotate(-45deg);
+  transform: translateY(15px) rotate(-45deg);
+}
+#nav-toggle.open span:nth-of-type(2) {
+  opacity: 0;
+}
+
+#nav-toggle.open span:nth-of-type(3) {
+  -webkit-transform: translateY(-15px) rotate(45deg);
+  transform: translateY(-13px) rotate(45deg);
+}
+
+#nav-toggle.open span:nth-child(3)::before {
+  content: ""
+}
+
+header h1 a{
+  margin: 30px 10px;
+  width: 160px;
+  height: 40px;
+  background: url(../img/logoMv.png) no-repeat;
+  background-size: 100%;
+
+}
+
+.nav-inner {
+  position:fixed;
+  top:0px;
+  right:0;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  padding: 100px 10px;
+  -webkit-transform: translateX(300px);
+  transform: translateX(300px);
+  -webkit-transition:ease .5s;
+  transition:ease .5s;
+  z-index:1;
+}
+
+div.open {
+  -webkit-transform:translateX(0);
+  transform:translateX(0);
+}
+
+.global-nav ul{
+  display: inline;
+    vertical-align: auto;
+    text-align: left;
+}
+
+}

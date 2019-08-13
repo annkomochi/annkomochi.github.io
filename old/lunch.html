@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>注文画面</title>
+</head>
+<body>
+  <form action="lunch.html" name="lunchmenu">
+    <p>ご注文はなんでしょう♪</p>
+  <label><input type="radio" name="menu" value="蒙古ラーメン">蒙古ラーメン</label>
+  <label><input type="radio" name="menu" value="一楽ラーメン">一楽ラーメン</label>
+<label><input type="radio" name="menu" value="節骨ラーメン">節骨ラーメン</label>
+  <p>オプションはいかがですか♪</p>
+  <label><input type="checkbox" name="big" >大盛<br></label>
+  <label><input type="checkbox" name="beef">チャーシュー飯<br></label>
+  <label><input type="checkbox" name="rice" >半チャーハン<br></label>
+  <label><input type="checkbox" name="gyoza" >餃子<br></label>
+
+<br><input type="button" value="注文する" id="button1">
+</form>
+</body>
+<script>
+  var setoption;
+  var setmenu;
+  var setoption2;
+
+document.getElementById('button1').addEventListener('click',function(){
+
+  if(document.cookie.length > 0){
+    alert('お客様は注文済みです。')
+  } else {
+    // length
+  for(i=0; i < lunchmenu.menu.length; i++){
+    if(lunchmenu.menu[i].checked == true){
+      setTimeout(timealert, 120000);
+      setmenu = lunchmenu.menu[i].value;
+      document.cookie = "SETMENU="+ setmenu+";max-age=180;path=/";
+      if(lunchmenu.big.checked == true){
+        setmenu = setmenu + '大盛';
+        document.cookie = "SETBIG = 大盛;max-age=180;path=/";
+      }
+      if(lunchmenu.beef.checked == true){
+        setmenu = setmenu + 'とチャーシュー飯';
+        document.cookie = "SETBEEF = チャーシュー飯;max-age=180;path=/";
+      }
+
+      if(lunchmenu.rice.checked == true){
+        setmenu = setmenu + 'と半チャーハン';
+        document.cookie = "SETRICE = 半チャーハン;max-age=180;path=/";
+      }
+
+      if(lunchmenu.gyoza.checked == true){
+        setmenu = setmenu + 'と餃子'
+        document.cookie =  "SETGYOZA = 餃子";"max-age=180;path=/";
+      }
+
+      alert('お客様は注文済みです。\n' + setmenu + 'です。\n' + 'しばらくお待ちください.')
+      break;
+      };
+  }
+}
+})
+
+var timealert = function(){
+  alert('ヘイお待ち!');
+}
+</script>
+</html>

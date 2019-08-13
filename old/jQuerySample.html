@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQueryサンプル集</title>
+
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #contents {
+      width: 800px;
+      margin: auto;
+    }
+
+    pre {
+      background-color: black;
+    }
+
+    code {
+      font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+    }
+
+    header {
+      width: 800px;
+      margin: auto;
+      text-align: center;
+      background-color: #011627;
+      color: #EFFFE9;
+    }
+
+    header h1 {
+      margin-top: 0px;
+      padding: 20px;
+    }
+
+    section a {
+      display: block;
+      width: 100px;
+      background: gainsboro;
+      text-align: center;
+      padding: 10px 0;
+      border: 1px dotted #000000;
+      text-decoration: none;
+    }
+
+    body {
+      background: #2EC4B6;
+    }
+
+    #contents {
+      background-color: #EFFFE9;
+      padding: 10px 20px;
+    }
+
+    h2 {
+      background-color: #E71D36;
+      color: #EFFFE9;
+
+    }
+
+
+    #content {
+      height: 300px;
+    }
+
+    #fly {
+      margin: 20px;
+    }
+
+    .line {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="contents">
+    <header id="top">
+      <h1>jQueryサンプル集</h1>
+      <!-- <a href="">自動スクロール</a>
+          <a href="">スクロールで表示</a>
+          <a href="">dkaoda</a> -->
+    </header>
+    <div id="main">
+      <section id="slideshow">
+        <h2>自動でスクロールするjQuery</h2>
+        <a href="scroll.html">→DEMO</a>
+        <p  class="line">HTML</p>
+        <pre><code class="prettyprint">
+            &lt;div id="one"&gt;
+            &lt;p id="scroll"&gt;ここをクリック&lt;/p&gt;
+            &lt;/div>
+            &lt;div id="two"&gt;&lt;/div&gt;
+            </code></pre>
+        <p  class="line">jQuery</p>
+        <pre><code class="prettyprint">
+            $('#scroll').click(function(){
+              $("html,body").animate({scrollTop:$('#two').offset().top});
+            })
+            </code></pre>
+        <p>サイトのトップページでよく見かけるスクロールを促すボタンをクリックすると自動でスクロールするあいつです。jQuryを使うとこんなにも簡単に出来る事に驚きました。</p>
+        <p  class="line">解説</p>
+        <pre><code class="prettyprint">
+                  $("html,body").animate({scrollTop:$('#two').offset().top},1000);
+                </code></pre>
+                <p>scrolletop:のあとに移動したい場所のスクロール数をいれます。<br>1000ミリ秒（1秒）で移動します。<br></p>
+      </section>
+      <section>
+        <h2>スクロールするとトップへ戻るが現れるjQuery</h2>
+        <a href="back.html">→DEMO</a>
+        <p  class="line">HTML</p>
+        <pre><code class="prettyprint">
+            &lt;p id="pagetop"&gt;&lt;a href="#one"&gt;PAGE TOP&lt;/a&gt;&lt;/p&gt;
+            </code></pre>
+        <p>これを実装したいページのコードの下の方に張り付けます。</p>
+        <p  class="line">jQuery</p>
+        <pre><code class="prettyprint">
+            $(function() {
+              var topBtn = $('#pagetop');    
+              topBtn.hide();
+              //スクロールが200に達したらボタン表示
+              $(window).scroll(function () {
+                  if ($(this).scrollTop() > 200) {
+                      topBtn.fadeIn();
+                  } else {
+                      topBtn.fadeOut();
+                  }
+              });
+          
+          });
+            </code></pre>
+            <p  class="line">解説</p>
+            <pre><code class="prettyprint">
+                topBtn.fadeIn();
+              </code></pre>
+              <p>フェードイン</p>
+              <pre><code class="prettyprint">
+                  topBtn.fadeOut();
+                </code></pre>
+                <p>フェードアウト、簡単ですね</p>
+      </section>
+      <section>
+        <h2>画像をふわふわさせるjQuery</h2>
+        <div id="content">
+          <img id="fly" src="images\bird_tonbi.png" alt="とんび" width="200px">
+        </div>
+        <p  class="line">HTML</p>
+        <pre><code class="prettyprint">
+              &lt;div id="content"&gt;
+              &lt;img  id="fly" src="" alt="" &gt;
+              &lt;/div&gt;
+              </code></pre>
+        <p>今回は画像でしたが文字とかでも大丈夫です。</p>
+        <p  class="line">css</p>
+        <pre><code class="prettyprint">
+            #content {
+              height: 300px;
+            }
+      </code></pre>
+      <p>親要素に高さを指定しないと下の要素に影響するので注意</p>
+        <p  class="line">jQuery</p>
+        <pre><code class="prettyprint">
+            $(function () {
+              setTimeout('fly()');
+            });
+          
+            function fly() {
+              $('#fly').animate({
+                marginTop: '-=10px'
+              }, 800).animate({
+                marginTop: '+=10px'
+              }, 800);
+              setTimeout('fly()', 1600); //アニメーションを繰り返す間隔
+            }
+              </code></pre>
+              <p class="line">解説</p>
+              <pre><code class="prettyprint">
+                  marginTop: '-=10px'
+                </code></pre>
+                <p>ここでマージンを削って浮いたようにします。</p>
+                <pre><code class="prettyprint">
+                    marginTop: '+=10px'
+                  </code></pre>
+                  <p>こんどはマージン増やして沈んだようにします。</p>
+      </section>
+      <section>
+          <h2>おまけ</h2>
+          <a href="animationpagetop.html">→DEMO</a>
+          <p  class="line">jQuery</p>
+          <pre><code class="prettyprint">
+              $(function() {
+                var topBtn = $('#pagetop');    
+                topBtn.hide();
+                //スクロールが100に達したらボタン表示
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 100) {
+                        topBtn.fadeIn();
+                    } else {
+                        topBtn.fadeOut();
+                    }
+                });
+            
+                    //スクロールしてトップ
+                    topBtn.click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 500);
+                    return false;
+                });
+            });
+              </code></pre>
+              <p>上で紹介した二つのjQueryを使えばアニメーションで上にスクロールしながらトップに戻ることが出来ます。</p>
+      </section>
+      <section>
+        <h2>参考サイト</h2>
+        <p>http://gimmicklog.main.jp/jquery/212/</p>
+        <p>https://www.will-hp.com/wpblog/web/149/</p>
+        <p>http://skill-stock.hokoweb.com/skill/31/</p>
+        
+      </section>
+    </div>
+    <div id="sub">
+
+    </div>
+  </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script>
+  $(function () {
+    setTimeout('fly()');
+  });
+
+  function fly() {
+    $('#fly').animate({
+      marginTop: '-=10px'
+    }, 800).animate({
+      marginTop: '+=10px'
+    }, 800);
+    setTimeout('fly()', 1600); //アニメーションを繰り返す間隔
+  }
+</script>
+
+</html>
